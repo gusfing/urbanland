@@ -1,0 +1,70 @@
+<!-- =========================
+Header
+===========================-->
+<header class="fixed top-0 left-0 z-50 w-full px-8 py-6 lg:px-12 lg:py-10">
+  <div class="flex items-center justify-between">
+    
+    <!-- Left: Logo -->
+    <div class="flex-shrink-0">
+      <a href="./index.html" class="flex items-center gap-2">
+        <span class="sr-only">Urbanland</span>
+        <img src="./images/shared/urbanland-logo.png" alt="Urbanland" class="logo-white h-8 w-auto" />
+        <span class="font-playfair text-xl font-bold tracking-wider text-white uppercase">Urbanland</span>
+      </a>
+    </div>
+
+    <!-- Center: Navigation -->
+    <nav class="hidden flex-grow justify-center xl:flex">
+      <ul class="flex items-center gap-8">
+        <li class="nav-item relative cursor-pointer" data-menu="company-mega-menu-v2">
+          <a href="#" class="font-inter text-sm font-medium tracking-wide text-white/90 hover:text-white transition-colors">About</a>
+          <Component src="src/components/shared/navbar/company-menu.htm" />
+        </li>
+        <li class="nav-item relative cursor-pointer" data-menu="product-mega-menu">
+          <a href="#" class="font-inter text-sm font-medium tracking-wide text-white/90 hover:text-white transition-colors">Products</a>
+          <Component src="src/components/shared/navbar/plan-and-support-menu.htm" />
+        </li>
+        <li class="nav-item relative cursor-pointer">
+          <a href="#" class="font-inter text-sm font-medium tracking-wide text-white/90 hover:text-white transition-colors">Spaces</a>
+        </li>
+        <li class="nav-item relative cursor-pointer">
+          <a href="#" class="font-inter text-sm font-medium tracking-wide text-white/90 hover:text-white transition-colors">Collabs</a>
+        </li>
+        <li class="nav-item relative cursor-pointer" data-menu="resources-dropdown-menu-v2">
+          <a href="#" class="font-inter text-sm font-medium tracking-wide text-white/90 hover:text-white transition-colors">Stories</a>
+          <Component src="src/components/shared/navbar/resources-menu.htm" />
+        </li>
+        <li class="nav-item relative cursor-pointer">
+          <a href="./contact.html" class="font-inter text-sm font-medium tracking-wide text-white/90 hover:text-white transition-colors">Contact</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Right: Icons -->
+    <div class="flex items-center gap-6">
+      <button class="text-white/90 hover:text-white transition-colors" aria-label="Search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
+        </svg>
+      </button>
+      <button class="text-white/90 hover:text-white transition-colors" aria-label="Account">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+        </svg>
+      </button>
+      
+      <!-- Mobile Hamburger -->
+      <div class="block xl:hidden">
+        <button class="nav-hamburger flex flex-col gap-1.5" aria-label="Menu">
+          <span class="block h-0.5 w-6 bg-white"></span>
+          <span class="block h-0.5 w-6 bg-white"></span>
+          <span class="block h-0.5 w-6 bg-white"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <Component src="src/components/shared/mobile-menu.htm" />
+</header>
+
+
+

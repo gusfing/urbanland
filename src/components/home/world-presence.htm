@@ -1,0 +1,122 @@
+<!-- Urbanland in the world section -->
+<section class="w-full overflow-hidden bg-white py-20 md:py-32" aria-labelledby="world-presence-heading">
+  <div class="main-container">
+    <div class="grid grid-cols-12 items-center gap-10 lg:gap-20">
+      
+      <!-- Left Content -->
+      <div class="col-span-12 lg:col-span-4 space-y-8">
+        <div class="space-y-4">
+          <h2
+            id="world-presence-heading"
+            data-text-reveal
+            class="font-sora text-4xl md:text-5xl lg:text-6xl font-normal leading-tight text-[#010101]"
+          >
+            Urbanland in the world
+          </h2>
+          <p
+            data-text-reveal
+            data-delay="0.2"
+            class="font-inter-tight text-lg md:text-xl text-[#010101]/70 leading-relaxed max-w-md"
+          >
+            Streets and parks around the world. This is a challenge we accept with both pride and responsibility. We create with a love for public space.
+          </p>
+        </div>
+
+        <div data-opai-animate data-delay="0.4">
+          <a href="./case-studies.html" class="group inline-flex items-center gap-4 bg-[#010101] px-10 py-5 text-white transition-all hover:bg-[#14743A]">
+            <span class="font-sora text-lg font-medium">Our projects</span>
+            <svg class="size-5 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14m-7-7 7 7-7 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Slider/Track -->
+      <div class="col-span-12 lg:col-span-8">
+        <div class="relative">
+          <div id="project-track" class="flex gap-6 overflow-x-auto pb-10 scrollbar-hide snap-x snap-mandatory">
+            
+            <!-- Project 1 -->
+            <div class="min-w-[300px] md:min-w-[450px] aspect-[3/4] relative rounded-[32px] overflow-hidden group snap-start">
+              <img src="./images/projects/project-1.png" alt="Vltava Areal" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-8 left-8 text-white">
+                <h3 class="font-sora text-3xl md:text-4xl font-normal mb-2">Vltava Areal</h3>
+                <p class="font-inter-tight text-white/80 uppercase tracking-widest text-sm">RIVAGE • České Budějovice</p>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="min-w-[300px] md:min-w-[450px] aspect-[3/4] relative rounded-[32px] overflow-hidden group snap-start">
+              <img src="./images/projects/banner-1.png" alt="Urban Park Life" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-8 left-8 text-white">
+                <h3 class="font-sora text-3xl md:text-4xl font-normal mb-2">Urban Park Life</h3>
+                <p class="font-inter-tight text-white/80 uppercase tracking-widest text-sm">BENCH • Central Park</p>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="min-w-[300px] md:min-w-[450px] aspect-[3/4] relative rounded-[32px] overflow-hidden group snap-start">
+              <img src="./images/projects/project-2.png" alt="Chotýčany" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-8 left-8 text-white">
+                <h3 class="font-sora text-3xl md:text-4xl font-normal mb-2">Chotýčany</h3>
+                <p class="font-inter-tight text-white/80 uppercase tracking-widest text-sm">CUBY • České Budějovice</p>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="min-w-[300px] md:min-w-[450px] aspect-[3/4] relative rounded-[32px] overflow-hidden group snap-start">
+              <img src="./images/projects/banner-2.png" alt="City Plaza Vibes" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+              <div class="absolute bottom-8 left-8 text-white">
+                <h3 class="font-sora text-3xl md:text-4xl font-normal mb-2">City Plaza Vibes</h3>
+                <p class="font-inter-tight text-white/80 uppercase tracking-widest text-sm">SHELTER • Downtown Square</p>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Navigation Arrow (Floating) -->
+          <button 
+            id="proj-next"
+            class="absolute right-6 top-1/2 -translate-y-1/2 z-10 flex size-14 items-center justify-center rounded-full bg-white text-[#010101] shadow-xl transition-all hover:scale-110 hover:bg-[#010101] hover:text-white"
+          >
+            <svg class="size-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14m-7-7 7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+</style>
+
+<script>
+  (function() {
+    const track = document.getElementById('project-track');
+    const nextBtn = document.getElementById('proj-next');
+    if(!track || !nextBtn) return;
+
+    nextBtn.addEventListener('click', () => {
+      const cardWidth = track.firstElementChild.offsetWidth + 24; // width + gap
+      const maxScroll = track.scrollWidth - track.clientWidth;
+      
+      if (track.scrollLeft >= maxScroll - 10) {
+        track.scrollTo({ left: 0, behavior: 'smooth' });
+      } else {
+        track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+      }
+    });
+  })();
+</script>
+
+
