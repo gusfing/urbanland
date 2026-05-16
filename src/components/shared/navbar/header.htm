@@ -15,23 +15,19 @@ Header
     <!-- Center: Navigation -->
     <nav class="hidden flex-grow justify-center xl:flex">
       <ul class="flex items-center gap-8 rounded-[9px] border border-white/20 bg-white/50 px-8 py-3.5 shadow-sm backdrop-blur-xl">
-        <li class="nav-item relative cursor-pointer" data-menu="company-mega-menu-v2">
-          <a href="#" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">About</a>
-          <Component src="src/components/shared/navbar/company-menu.htm" />
-        </li>
         <li class="nav-item relative cursor-pointer" data-menu="product-mega-menu">
-          <a href="#" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">Products</a>
+          <a href="./products.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">Products</a>
           <Component src="src/components/shared/navbar/plan-and-support-menu.htm" />
         </li>
         <li class="nav-item relative cursor-pointer">
-          <a href="#" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">Spaces</a>
+          <a href="./solutions.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">Solutions</a>
         </li>
         <li class="nav-item relative cursor-pointer">
-          <a href="#" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">Collabs</a>
+          <a href="./case-studies.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">Projects</a>
         </li>
-        <li class="nav-item relative cursor-pointer" data-menu="resources-dropdown-menu-v2">
-          <a href="#" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">Stories</a>
-          <Component src="src/components/shared/navbar/resources-menu.htm" />
+        <li class="nav-item relative cursor-pointer" data-menu="company-mega-menu-v2">
+          <a href="./about.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">About Us</a>
+          <Component src="src/components/shared/navbar/company-menu.htm" />
         </li>
         <li class="nav-item relative cursor-pointer">
           <a href="./contact.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">Contact</a>
@@ -39,19 +35,17 @@ Header
       </ul>
     </nav>
 
-    <!-- Right: Icons -->
-    <div class="flex items-center gap-6 rounded-[9px] border border-white/20 bg-white/50 px-6 py-3.5 shadow-sm backdrop-blur-xl">
-      <button class="text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70" aria-label="Search">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>
-        </svg>
-      </button>
-      <button class="text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70" aria-label="Account">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
-        </svg>
-      </button>
-      
+    <!-- Right: CTA + Hamburger -->
+    <div class="flex items-center gap-3 rounded-[9px] border border-white/20 bg-white/50 px-4 py-2.5 shadow-sm backdrop-blur-xl">
+      <!-- Get Quote CTA (hidden on mobile) -->
+      <a
+        href="./contact.html"
+        id="nav-cta-quote"
+        class="hidden xl:inline-flex items-center gap-2 rounded-[9px] bg-[#E8611A] px-5 py-2.5 font-inter text-sm font-semibold text-white transition-all hover:bg-[#c9511a] hover:shadow-md"
+      >
+        Get Project Quote
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+      </a>
       <!-- Mobile Hamburger -->
       <div class="block xl:hidden">
         <button class="nav-hamburger flex flex-col gap-1.5" aria-label="Menu">

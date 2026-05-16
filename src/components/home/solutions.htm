@@ -1,137 +1,94 @@
 <!-- solutions section -->
-<section class="py-[80px] md:py-[120px] xl:py-[156px]" aria-labelledby="solutions-heading">
+<section class="py-[80px] md:py-[120px] xl:py-[156px] bg-white" aria-labelledby="solutions-heading">
   <div class="main-container">
     <div class="space-y-14">
-      <!-- content  -->
+      <!-- Heading -->
       <div class="space-y-3">
         <h2
+          id="solutions-heading"
           data-text-reveal
           class="font-sora text-sora-heading-4 md:text-sora-heading-3 lg:text-sora-heading-2 text-background-13/90 mx-auto max-w-[800px] text-center font-normal"
         >
-          Urbanland: Smart Solutions for Modern Cities
+          Outdoor &amp; Urban Furniture Solutions for Every Project Type
         </h2>
         <p
           data-text-reveal
           data-delay="0.2"
-          class="font-inter-tight text-tagline-1 text-background-13/60 mx-auto max-w-[500px] text-center font-normal"
-          itemprop="description"
+          class="font-inter-tight text-tagline-1 text-background-13/60 mx-auto max-w-[560px] text-center font-normal"
         >
-          Enhancing urban life through innovative street furniture and sustainable city infrastructure.
+          From luxury townships to smart city infrastructure — one manufacturer, complete outdoor furniture solutions.
         </p>
       </div>
 
-      <!-- card  -->
+      <!-- Cards Grid -->
+      <div class="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3" role="list" aria-label="Solutions by sector">
 
-      <div
-        class="grid grid-cols-12 items-center justify-center gap-4 *:col-span-12 md:*:col-span-6 lg:gap-2 lg:*:col-start-auto md:[&>*:last-child]:col-span-12 lg:[&>*:nth-child(5n+1)]:col-span-4 lg:[&>*:nth-child(5n+2)]:col-span-4 lg:[&>*:nth-child(5n+3)]:col-span-4 lg:[&>*:nth-child(5n+4)]:col-span-6 lg:[&>*:nth-child(5n+5)]:col-span-6"
-        role="list"
-        aria-label="AI solutions"
-      >
-        <!-- card one  -->
-        <div data-opai-animate data-delay="0.1">
-          <a href="./service-details.html">
-            <Component
-              src="src/components/shared/card/services-card.htm"
-              title="Deep Learning"
-              description="Train multi-layer Neural Networks for complex pattern recognition and prediction."
-              icon="ns-shape-1"
-            />
+        <!-- Card 1: Real Estate -->
+        <div data-opai-animate data-delay="0.1" class="group flex flex-col gap-4 rounded-[9px] border border-gray-200 bg-[#f8f8f6] p-8 transition-all duration-300 hover:border-[#14743A]/40 hover:shadow-lg hover:-translate-y-1">
+          <div class="flex size-12 items-center justify-center rounded-[9px] bg-[#14743A]/10 text-[#14743A]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M9 21V5l9 -2v18"/><path d="M9 9h1"/><path d="M9 13h1"/><path d="M9 17h1"/></svg>
+          </div>
+          <h3 class="font-sora text-lg font-semibold text-[#010101]">Real Estate &amp; Townships</h3>
+          <p class="font-inter-tight text-sm leading-relaxed text-[#010101]/65">Premium WPC benches, GFRC planters, car parking sheds, and cabanas that enhance property value and resident experience. Bulk supply with guaranteed timelines for your handover schedule.</p>
+          <a href="./solutions/real-estate" class="group/link mt-auto inline-flex items-center gap-2 font-inter text-sm font-semibold text-[#14743A] transition-colors hover:text-[#0f5a2d]">
+            Explore Real Estate Solutions
+            <svg class="size-4 transition-transform group-hover/link:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
           </a>
         </div>
 
-        <!-- card two  -->
-        <div
-          data-opai-animate
-          data-delay="0.2"
-          class="col-span-12 md:col-span-6 lg:col-span-4"
-          role="listitem"
-          itemscope
-          itemtype="https://schema.org/Service"
-        >
-          <a href="./service-details.html">
-            <Component
-              src="src/components/shared/card/services-card.htm"
-              title="Computer Vision"
-              description="Image and video analysis powered by convolutions Neural Networks (CNNs)."
-              icon="ns-shape-2"
-            />
+        <!-- Card 2: Hotels & Resorts -->
+        <div data-opai-animate data-delay="0.2" class="group flex flex-col gap-4 rounded-[9px] border border-gray-200 bg-[#f8f8f6] p-8 transition-all duration-300 hover:border-[#14743A]/40 hover:shadow-lg hover:-translate-y-1">
+          <div class="flex size-12 items-center justify-center rounded-[9px] bg-[#8C3721]/10 text-[#8C3721]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12h20M2 6h20M2 18h20"/><circle cx="12" cy="12" r="3"/></svg>
+          </div>
+          <h3 class="font-sora text-lg font-semibold text-[#010101]">Hotels &amp; Resorts</h3>
+          <p class="font-inter-tight text-sm leading-relaxed text-[#010101]/65">Luxury poolside loungers, wicker dining sets, and canteen furniture engineered for high guest footfall. Custom finishes to match your property's design language.</p>
+          <a href="./solutions/hotels-resorts" class="group/link mt-auto inline-flex items-center gap-2 font-inter text-sm font-semibold text-[#14743A] transition-colors hover:text-[#0f5a2d]">
+            Explore Hospitality Solutions
+            <svg class="size-4 transition-transform group-hover/link:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
           </a>
         </div>
 
-        <!-- card three  -->
-        <div
-          data-opai-animate
-          data-delay="0.3"
-          class="col-span-12 md:col-span-6 lg:col-span-4"
-          role="listitem"
-          itemscope
-          itemtype="https://schema.org/Service"
-        >
-          <a href="./service-details.html">
-            <Component
-              src="src/components/shared/card/services-card.htm"
-              title="NLP & Transformers"
-              description="Language understanding and generation with transformer architectures."
-              icon="ns-shape-3"
-            />
+        <!-- Card 3: Hospitals -->
+        <div data-opai-animate data-delay="0.3" class="group flex flex-col gap-4 rounded-[9px] border border-gray-200 bg-[#f8f8f6] p-8 transition-all duration-300 hover:border-[#14743A]/40 hover:shadow-lg hover:-translate-y-1">
+          <div class="flex size-12 items-center justify-center rounded-[9px] bg-[#14743A]/10 text-[#14743A]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 6v6m0 0v6m0-6h6m-6 0H6"/><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+          </div>
+          <h3 class="font-sora text-lg font-semibold text-[#010101]">Hospitals &amp; Healthcare</h3>
+          <p class="font-inter-tight text-sm leading-relaxed text-[#010101]/65">Durable, low-maintenance benches, dustbins, and canteen tables built to withstand heavy daily use in medical campuses. Easy-clean materials that meet hygiene requirements.</p>
+          <a href="./solutions/hospitals" class="group/link mt-auto inline-flex items-center gap-2 font-inter text-sm font-semibold text-[#14743A] transition-colors hover:text-[#0f5a2d]">
+            Explore Healthcare Solutions
+            <svg class="size-4 transition-transform group-hover/link:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
           </a>
         </div>
 
-        <!-- card four  -->
-        <div
-          data-opai-animate
-          data-delay="0.4"
-          class="col-span-12 md:col-span-6"
-          role="listitem"
-          itemscope
-          itemtype="https://schema.org/Service"
-        >
-          <a href="./service-details.html">
-            <Component
-              src="src/components/shared/card/services-card.htm"
-              title="Neural Architecture"
-              description="Custom network design, hyperparameter tuning, and automated ML (NAS)."
-              icon="ns-shape-4"
-            />
+        <!-- Card 4: Schools & Universities -->
+        <div data-opai-animate data-delay="0.4" class="group flex flex-col gap-4 rounded-[9px] border border-gray-200 bg-[#f8f8f6] p-8 transition-all duration-300 hover:border-[#14743A]/40 hover:shadow-lg hover:-translate-y-1">
+          <div class="flex size-12 items-center justify-center rounded-[9px] bg-[#8C3721]/10 text-[#8C3721]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h3 class="font-sora text-lg font-semibold text-[#010101]">Schools &amp; Universities</h3>
+          <p class="font-inter-tight text-sm leading-relaxed text-[#010101]/65">Heavy-duty canteen tables, WPC benches, and GFRC planters built for high-footfall educational campuses. Resistant to vandalism, low on maintenance.</p>
+          <a href="./solutions/education" class="group/link mt-auto inline-flex items-center gap-2 font-inter text-sm font-semibold text-[#14743A] transition-colors hover:text-[#0f5a2d]">
+            Explore Campus Solutions
+            <svg class="size-4 transition-transform group-hover/link:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
           </a>
         </div>
 
-        <!-- card five  -->
-        <div
-          data-opai-animate
-          data-delay="0.5"
-          class="col-span-12 col-start-auto md:col-span-6 md:col-start-4 lg:col-start-auto"
-          role="listitem"
-          itemscope
-          itemtype="https://schema.org/Service"
-        >
-          <a href="./service-details.html">
-            <Component
-              src="src/components/shared/card/services-card.htm"
-              title="Model Deployment"
-              description="Production inference APIs and edge deployment for trained Neural Networks."
-              icon="ns-shape-5"
-            />
+        <!-- Card 5: Municipal & Smart Cities -->
+        <div data-opai-animate data-delay="0.5" class="group flex flex-col gap-4 rounded-[9px] border border-gray-200 bg-[#f8f8f6] p-8 transition-all duration-300 hover:border-[#14743A]/40 hover:shadow-lg hover:-translate-y-1 md:col-span-2 lg:col-span-1">
+          <div class="flex size-12 items-center justify-center rounded-[9px] bg-[#14743A]/10 text-[#14743A]">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M3 7v1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7m0 1a3 3 0 0 0 6 0V7M4 21V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v17"/></svg>
+          </div>
+          <h3 class="font-sora text-lg font-semibold text-[#010101]">Municipal &amp; Smart Cities</h3>
+          <p class="font-inter-tight text-sm leading-relaxed text-[#010101]/65">Robust MS/SS bus shelters, stainless steel bollards, park benches, and outdoor dustbins for India's Smart City Mission projects. Compliant with urban infrastructure standards.</p>
+          <a href="./solutions/smart-cities" class="group/link mt-auto inline-flex items-center gap-2 font-inter text-sm font-semibold text-[#14743A] transition-colors hover:text-[#0f5a2d]">
+            Explore Smart City Solutions
+            <svg class="size-4 transition-transform group-hover/link:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
           </a>
         </div>
-      </div>
 
-      <!-- btn -->
-      <div
-        data-opai-animate
-        data-delay="0.8"
-        class="text-center"
-        role="region"
-        aria-label="Call to action"
-      >
-        <Component
-          src="src/components/shared/button/link-primary.htm"
-          button-text="Discover our services"
-          href="./services.html"
-        />
       </div>
     </div>
   </div>
 </section>
-
-
