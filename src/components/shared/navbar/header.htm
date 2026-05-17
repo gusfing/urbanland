@@ -38,22 +38,18 @@ Header
 
     <!-- Right: CTA + Hamburger -->
     <div class="flex items-center gap-4">
-      <!-- Get Quote CTA (standalone floating button on desktop) -->
-      <a
-        href="./contact.html"
-        id="nav-cta-quote"
-        class="hidden xl:inline-flex items-center gap-2 rounded-[9px] bg-[#E8611A] px-5 py-2.5 font-inter text-sm font-semibold text-white transition-all hover:bg-[#c9511a] hover:shadow-[0_8px_24px_rgba(232,97,26,0.3)] hover:scale-[1.02]"
-      >
+      <!-- Get Quote CTA -->
+      <a href="./contact.html" class="hidden xl:inline-flex btn-shadcn" aria-label="Get Project Quote">
         Get Project Quote
-        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        <span class="btn-shadcn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-right opacity-60"><path d="m9 18 6-6-6-6"/></svg>
+        </span>
       </a>
       
       <!-- Mobile Hamburger Button -->
       <div class="block xl:hidden">
-        <button class="nav-hamburger flex flex-col justify-between h-[14px] w-[20px] cursor-pointer group" aria-label="Menu">
-          <span class="hamburger-line block h-[1.5px] w-full bg-white transition-all duration-300"></span>
-          <span class="hamburger-line block h-[1.5px] w-[14px] bg-white transition-all duration-300 ml-auto group-hover:w-full"></span>
-          <span class="hamburger-line block h-[1.5px] w-full bg-white transition-all duration-300"></span>
+        <button class="nav-hamburger flex h-10 w-10 cursor-pointer items-center justify-center rounded-lg border border-white/20 bg-white/10 text-white transition-all hover:bg-white/20" aria-label="Menu" id="hamburger-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
         </button>
       </div>
     </div>
@@ -66,7 +62,7 @@ Header
     const container = document.getElementById('header-container');
     const logo = document.getElementById('header-logo');
     const navLinks = document.querySelectorAll('.nav-link');
-    const hamburgerLines = document.querySelectorAll('.hamburger-line');
+    const hamburgerBtn = document.getElementById('hamburger-btn');
     
     function updateHeaderState() {
       if (window.scrollY > 50) {
@@ -81,10 +77,10 @@ Header
           link.classList.add('text-[#1A1A1A]');
         });
         
-        hamburgerLines.forEach(line => {
-          line.classList.remove('bg-white');
-          line.classList.add('bg-[#1A1A1A]');
-        });
+        if (hamburgerBtn) {
+          hamburgerBtn.classList.remove('text-white', 'border-white/20', 'bg-white/10', 'hover:bg-white/20');
+          hamburgerBtn.classList.add('text-[#1A1A1A]', 'border-[#1A1A1A]/20', 'bg-transparent', 'hover:bg-black/5');
+        }
       } else {
         // Top state - transparent/glassy
         container.classList.add('bg-white/10', 'border-white/20', 'hover:bg-white/20');
@@ -97,10 +93,10 @@ Header
           link.classList.remove('text-[#1A1A1A]');
         });
         
-        hamburgerLines.forEach(line => {
-          line.classList.add('bg-white');
-          line.classList.remove('bg-[#1A1A1A]');
-        });
+        if (hamburgerBtn) {
+          hamburgerBtn.classList.add('text-white', 'border-white/20', 'bg-white/10', 'hover:bg-white/20');
+          hamburgerBtn.classList.remove('text-[#1A1A1A]', 'border-[#1A1A1A]/20', 'bg-transparent', 'hover:bg-black/5');
+        }
       }
     }
     
