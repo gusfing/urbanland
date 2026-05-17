@@ -4,60 +4,58 @@ Header
 <header class="fixed top-4 left-1/2 z-50 w-[calc(100%-2rem)] max-w-[1440px] -translate-x-1/2">
   <div class="flex items-center justify-between">
     
-    <!-- Left: Logo -->
-    <div class="flex-shrink-0 rounded-[9px] border border-white/20 bg-white/50 px-6 py-3 shadow-sm backdrop-blur-xl">
+    <!-- Left: Logo Bento Capsule -->
+    <div class="flex-shrink-0 rounded-[9px] border border-[#1A1A1A]/10 bg-white/70 px-6 py-3.5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] backdrop-blur-xl">
       <a href="./index.html" class="flex items-center gap-2">
         <span class="sr-only">Urbanland</span>
-        <img src="./images/shared/urbanland-logo.png" alt="Urbanland" class="h-8 w-auto" />
+        <img src="./images/shared/urbanland-logo.png" alt="Urbanland" class="h-8 w-auto transition-transform duration-300 hover:scale-[1.02]" />
       </a>
     </div>
 
-    <!-- Center: Navigation -->
+    <!-- Center: Bento Navigation Capsule -->
     <nav class="hidden flex-grow justify-center xl:flex">
-      <ul class="flex items-center gap-8 rounded-[9px] border border-white/20 bg-white/50 px-8 py-3.5 shadow-sm backdrop-blur-xl">
+      <ul class="flex items-center gap-8 rounded-[9px] border border-[#1A1A1A]/10 bg-white/70 px-8 py-4 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] backdrop-blur-xl">
         <li class="nav-item relative cursor-pointer" data-menu="product-mega-menu">
-          <a href="./products.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">Products</a>
+          <a href="./products.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#E8611A]">Products</a>
           <Component src="src/components/shared/navbar/plan-and-support-menu.htm" />
         </li>
         <li class="nav-item relative cursor-pointer">
-          <a href="./solutions.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">Solutions</a>
+          <a href="./solutions.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#E8611A]">Solutions</a>
         </li>
         <li class="nav-item relative cursor-pointer">
-          <a href="./case-studies.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">Projects</a>
+          <a href="./case-studies.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#E8611A]">Projects</a>
         </li>
         <li class="nav-item relative cursor-pointer" data-menu="company-mega-menu-v2">
-          <a href="./about.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">About Us</a>
+          <a href="./about.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#E8611A]">About Us</a>
           <Component src="src/components/shared/navbar/company-menu.htm" />
         </li>
         <li class="nav-item relative cursor-pointer">
-          <a href="./contact.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#1A1A1A]/70">Contact</a>
+          <a href="./contact.html" class="font-inter text-sm font-medium tracking-wide text-[#1A1A1A] transition-colors hover:text-[#E8611A]">Contact</a>
         </li>
       </ul>
     </nav>
 
-    <!-- Right: CTA + Hamburger -->
-    <div class="flex items-center gap-3 rounded-[9px] border border-white/20 bg-white/50 px-4 py-2.5 shadow-sm backdrop-blur-xl">
-      <!-- Get Quote CTA (hidden on mobile) -->
+    <!-- Right: CTA + Hamburger Bento Capsule -->
+    <div class="flex items-center gap-3 rounded-[9px] border border-[#1A1A1A]/10 bg-white/70 px-4 py-3.5 shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] backdrop-blur-xl xl:bg-transparent xl:border-none xl:p-0 xl:shadow-none xl:backdrop-blur-none">
+      <!-- Get Quote CTA (standalone floating bento button on desktop) -->
       <a
         href="./contact.html"
         id="nav-cta-quote"
-        class="hidden xl:inline-flex items-center gap-2 rounded-[9px] bg-[#E8611A] px-5 py-2.5 font-inter text-sm font-semibold text-white transition-all hover:bg-[#c9511a] hover:shadow-md"
+        class="hidden xl:inline-flex items-center gap-2 rounded-[9px] bg-[#E8611A] px-5 py-3 font-inter text-sm font-semibold text-white transition-all hover:bg-[#c9511a] hover:shadow-[0_4px_20px_rgba(232,97,26,0.3)] hover:scale-[1.02]"
       >
         Get Project Quote
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
       </a>
-      <!-- Mobile Hamburger -->
+      
+      <!-- Mobile Hamburger Button inside its own capsule trigger -->
       <div class="block xl:hidden">
-        <button class="nav-hamburger flex flex-col gap-1.5" aria-label="Menu">
-          <span class="block h-0.5 w-6 bg-[#1A1A1A]"></span>
-          <span class="block h-0.5 w-6 bg-[#1A1A1A]"></span>
-          <span class="block h-0.5 w-6 bg-[#1A1A1A]"></span>
+        <button class="nav-hamburger flex flex-col justify-between h-[12px] w-[18px] cursor-pointer group" aria-label="Menu">
+          <span class="block h-[1.5px] w-full bg-[#1A1A1A] transition-all duration-300"></span>
+          <span class="block h-[1.5px] w-[12px] bg-[#1A1A1A] transition-all duration-300 ml-auto group-hover:w-full"></span>
+          <span class="block h-[1.5px] w-full bg-[#1A1A1A] transition-all duration-300"></span>
         </button>
       </div>
     </div>
   </div>
   <Component src="src/components/shared/mobile-menu.htm" />
 </header>
-
-
-

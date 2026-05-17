@@ -1,324 +1,126 @@
 <!-- =========================
 Mobile Menu
 ===========================-->
-
 <aside
-  class="sidebar scroll-bar border-stroke-3/18 fixed top-0 right-0 z-9999 h-screen w-full translate-x-full border-l bg-white transition-all duration-300 sm:w-1/2 sm:rounded-l-xl xl:hidden"
+  class="sidebar scroll-bar border-l border-white/10 fixed top-0 right-0 z-[9999] h-screen w-full translate-x-full bg-[#0B0B0B]/98 backdrop-blur-3xl transition-all duration-300 sm:w-[420px] sm:rounded-l-2xl xl:hidden"
 >
-  <div class="space-y-4 p-5 sm:p-8 lg:p-9">
-    <div class="flex items-center justify-between">
-      <a href="./index.html">
+  <div class="space-y-6 p-6 sm:p-8">
+    
+    <!-- Mobile Drawer Header -->
+    <div class="flex items-center justify-between pb-6 border-b border-white/5">
+      <a href="./index.html" class="flex items-center">
         <span class="sr-only">Home</span>
-        <figure class="max-w-[44px]">
-          <img src="./images/shared/urbanland-logo.png" alt="Urbanland" class="block w-full" />
+        <figure class="max-w-[120px]">
+          <img src="./images/shared/urbanland-logo.png" alt="Urbanland" class="block w-full invert-[0.95] brightness-200" />
         </figure>
       </a>
       <button
-        class="nav-hamburger-close bg-background-13/10 hover:bg-background-13/20 relative flex size-10 cursor-pointer flex-col items-center justify-center gap-1.5 rounded-full transition-colors duration-200"
+        class="nav-hamburger-close bg-white/5 hover:bg-white/10 border border-white/10 relative flex size-10 cursor-pointer flex-col items-center justify-center rounded-full transition-all duration-300 hover:scale-105"
+        aria-label="Close Menu"
       >
         <span class="sr-only">Close Menu</span>
-        <span class="bg-background-13 absolute block h-0.5 w-4 rotate-45"></span>
-        <span class="bg-background-13 absolute block h-0.5 w-4 -rotate-45"></span>
+        <span class="bg-white absolute block h-0.5 w-4 rotate-45"></span>
+        <span class="bg-white absolute block h-0.5 w-4 -rotate-45"></span>
       </button>
     </div>
-    <div class="scroll-bar mt-6 h-[85vh] w-full overflow-x-hidden overflow-y-auto pb-10">
-      <ul class="space-y-2">
-        <li class="space-y-2">
-          <button
-            class="group mobile-menu-toggle flex w-full cursor-pointer items-center justify-between py-2.5 text-left font-normal data-[selected=true]:font-medium"
-            data-menu="company"
-            data-selected="true"
-            type="button"
-          >
-            <span class="font-sora text-tagline-2 text-background-13/90 group-data-[selected=true]:text-background-13 block"
-              >Company</span
-            >
 
-            <span class="menu-arrow rotate-90 transition-transform duration-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  d="M10 12L14 8L10 4"
-                  class="stroke-background-13/90"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </span>
-          </button>
-          <ul class="mobile-submenu block" data-submenu="company">
+    <!-- Scrollable Mobile Navigation -->
+    <div class="scroll-bar mt-6 h-[75vh] w-full overflow-x-hidden overflow-y-auto pb-16">
+      <ul class="space-y-8">
+        
+        <!-- Column 1: PRODUCTS -->
+        <li class="space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="font-mono text-[9px] font-medium tracking-widest text-[#E8611A]/80">01</span>
+            <span class="font-sora text-xs font-bold uppercase tracking-[0.2em] text-white/90">PRODUCTS</span>
+          </div>
+          <ul class="pl-6 space-y-3 border-l border-white/5 ml-1.5">
             <li>
-              <a
-                href="./about.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-1.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >About Us</a
-              >
+              <a href="./products.html" class="font-inter text-xs text-white/40 hover:text-[#E8611A] transition-colors duration-200 block py-0.5">Benches &amp; Planters</a>
             </li>
             <li>
-              <a
-                href="./services.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Our Services</a
-              >
+              <a href="./products.html" class="font-inter text-xs text-white/40 hover:text-[#E8611A] transition-colors duration-200 block py-0.5">Bus Shelters &amp; Dustbins</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Product Features</a
-              >
-            </li>
-            <li>
-              <a
-                href="./blog.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Blog &amp; News</a
-              >
+              <a href="./products.html" class="font-inter text-xs text-white/40 hover:text-[#E8611A] transition-colors duration-200 block py-0.5">Canteen &amp; Wicker Sets</a>
             </li>
           </ul>
         </li>
-        <li class="space-y-2">
-          <button
-            class="group mobile-menu-toggle flex w-full cursor-pointer items-center justify-between py-2.5 text-left font-normal data-[selected=true]:font-medium"
-            data-menu="collaborate"
-            type="button"
-          >
-            <span class="font-sora text-tagline-2 text-background-13/90 group-data-[selected=true]:text-background-13 relative block"
-              >Collaborate</span
-            >
 
-            <span class="menu-arrow transition-transform duration-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  d="M10 12L14 8L10 4"
-                  class="stroke-background-13/90"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </span>
-          </button>
-          <ul class="mobile-submenu hidden" data-submenu="collaborate">
+        <!-- Column 2: SOLUTIONS -->
+        <li class="space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="font-mono text-[9px] font-medium tracking-widest text-[#E8611A]/80">02</span>
+            <span class="font-sora text-xs font-bold uppercase tracking-[0.2em] text-white/90">SOLUTIONS</span>
+          </div>
+          <ul class="pl-6 space-y-3 border-l border-white/5 ml-1.5">
             <li>
-              <a
-                href="#"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Affiliate</a
-              >
+              <a href="./solutions.html" class="font-inter text-xs text-white/40 hover:text-[#E8611A] transition-colors duration-200 block py-0.5">Real Estate &amp; Townships</a>
             </li>
             <li>
-              <a
-                href="#"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Referral</a
-              >
+              <a href="./solutions.html" class="font-inter text-xs text-white/40 hover:text-[#E8611A] transition-colors duration-200 block py-0.5">Hotels &amp; Resorts</a>
             </li>
             <li>
-              <a
-                href="./login.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Login</a
-              >
-            </li>
-            <li>
-              <a
-                href="./signup.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Create Account</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Download</a
-              >
-            </li>
-            <li>
-              <a
-                href="./integration.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Integration</a
-              >
+              <a href="./solutions.html" class="font-inter text-xs text-white/40 hover:text-[#E8611A] transition-colors duration-200 block py-0.5">Municipal &amp; Smart Cities</a>
             </li>
           </ul>
         </li>
-        <li class="space-y-2">
-          <button
-            class="group mobile-menu-toggle flex w-full cursor-pointer items-center justify-between py-2.5 text-left font-normal data-[selected=true]:font-medium"
-            data-menu="inner-pages"
-            type="button"
-          >
-            <span class="font-sora text-tagline-2 text-background-13/90 group-data-[selected=true]:text-background-13 relative block"
-              >Inner pages</span
-            >
 
-            <span class="menu-arrow transition-transform duration-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  d="M10 12L14 8L10 4"
-                  class="stroke-background-13/90"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </span>
-          </button>
-          <ul class="mobile-submenu hidden" data-submenu="inner-pages">
+        <!-- Column 3: PROJECTS -->
+        <li class="space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="font-mono text-[9px] font-medium tracking-widest text-[#E8611A]/80">03</span>
+            <span class="font-sora text-xs font-bold uppercase tracking-[0.2em] text-white/90">PROJECTS</span>
+          </div>
+          <ul class="pl-6 space-y-3 border-l border-white/5 ml-1.5">
             <li>
-              <a
-                href="./blog.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Blog</a
-              >
+              <a href="./case-studies.html" class="font-inter text-xs text-white/40 hover:text-[#E8611A] transition-colors duration-200 block py-0.5">Landmark Projects</a>
             </li>
             <li>
-              <a
-                href="./integration.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Integration</a
-              >
-            </li>
-            <li>
-              <a
-                href="./case-studies.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Case Studies</a
-              >
-            </li>
-            <li>
-              <a
-                href="./testimonials.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Testimonial</a
-              >
-            </li>
-            <li>
-              <a
-                href="./services.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Services</a
-              >
-            </li>
-            <li>
-              <a
-                href="./contact.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a
-                href="./team.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Team</a
-              >
+              <a href="./testimonials.html" class="font-inter text-xs text-white/40 hover:text-[#E8611A] transition-colors duration-200 block py-0.5">Client Reviews</a>
             </li>
           </ul>
         </li>
-        <li class="space-y-2">
-          <button
-            class="group mobile-menu-toggle flex w-full cursor-pointer items-center justify-between py-2.5 text-left font-normal data-[selected=true]:font-medium"
-            data-menu="people-culture"
-            type="button"
-          >
-            <span class="font-sora text-tagline-2 text-background-13/90 group-data-[selected=true]:text-background-13 relative block"
-              >People &amp; Culture</span
-            >
 
-            <span class="menu-arrow transition-transform duration-300">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-              >
-                <path
-                  d="M10 12L14 8L10 4"
-                  class="stroke-background-13/90"
-                  stroke-width="1.5"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
+        <!-- Column 4: COMPANY -->
+        <li class="space-y-3">
+          <div class="flex items-center gap-3">
+            <span class="font-mono text-[9px] font-medium tracking-widest text-[#E8611A]/80">04</span>
+            <span class="font-sora text-xs font-bold uppercase tracking-[0.2em] text-white/90 inline-flex items-center gap-2">
+              COMPANY
+              <span class="relative flex h-1.5 w-1.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#E8611A] opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#E8611A]"></span>
+              </span>
             </span>
-          </button>
-          <ul class="mobile-submenu hidden" data-submenu="people-culture">
+          </div>
+          <ul class="pl-6 space-y-3 border-l border-white/5 ml-1.5">
             <li>
-              <a
-                href="#"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Process</a
-              >
+              <a href="./about.html" class="font-inter text-xs text-white/40 hover:text-[#E8611A] transition-colors duration-200 block py-0.5">About Us</a>
             </li>
             <li>
-              <a
-                href="./team.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Team</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Career</a
-              >
-            </li>
-            <li>
-              <a
-                href="./testimonials.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Testimonial</a
-              >
-            </li>
-            <li>
-              <a
-                href="#"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Customer</a
-              >
-            </li>
-            <li>
-              <a
-                href="./contact.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Contact</a
-              >
-            </li>
-            <li>
-              <a
-                href="./pricing.html"
-                class="text-tagline-3 text-background-13/80 hover:text-background-13/90 ml-4 block py-2.5 text-left font-normal data-[selected=true]:font-medium data-[selected=true]:text-background-13 transition-colors duration-200"
-                >Pricing</a
-              >
+              <a href="./contact.html" class="font-inter text-xs text-white/40 hover:text-[#E8611A] transition-colors duration-200 block py-0.5">Contact Us</a>
             </li>
           </ul>
         </li>
+
       </ul>
+
+      <!-- Bottom CTAs Inside Mobile Drawer -->
+      <div class="mt-12 pt-8 border-t border-white/5 space-y-6">
+        <a
+          href="./contact.html"
+          class="flex w-full items-center justify-center gap-2 rounded-[10px] bg-[#E8611A] py-3.5 text-center font-inter text-xs font-bold uppercase tracking-wider text-white transition-all hover:bg-[#c9511a]"
+        >
+          Get Project Quote
+          <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-7-7 7 7-7 7"/></svg>
+        </a>
+        <div class="space-y-2 text-center">
+          <p class="font-inter text-[10px] text-white/30 tracking-wide">★ ISO 9001:2015 Certified  •  ✓ 2-Year Guarantee</p>
+          <p class="font-inter text-[10px] text-white/30 tracking-wide">Made in India with Pride 🇮🇳</p>
+        </div>
+      </div>
+
     </div>
   </div>
 </aside>
-
-

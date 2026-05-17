@@ -1,32 +1,72 @@
 <!-- Urbanland in the world section -->
-<section class="w-full overflow-hidden bg-[#f5f5f3] py-20 md:py-28" aria-labelledby="world-presence-heading">
-  <div class="flex flex-col lg:flex-row items-start gap-0">
+<section class="w-full overflow-hidden bg-transparent py-20 md:py-28 relative" aria-labelledby="world-presence-heading">
+  <div class="flex flex-col lg:flex-row items-start gap-12 lg:gap-0">
 
     <!-- Left Content — fixed width, vertically distributed -->
-    <div class="flex flex-col justify-between px-8 md:px-16 lg:w-[340px] xl:w-[380px] shrink-0 py-4 lg:py-0 lg:min-h-[560px] gap-10">
+    <div class="flex flex-col justify-between px-6 md:px-16 lg:w-[400px] xl:w-[440px] shrink-0 py-4 lg:py-0 lg:min-h-[580px] gap-10">
 
-      <!-- Heading -->
-      <h2
-        id="world-presence-heading"
-        data-text-reveal
-        class="font-sora text-[clamp(2.5rem,6vw,4.5rem)] font-normal leading-[1.08] tracking-tight text-[#010101]"
-      >
-        Urbanland in the world
-      </h2>
+      <div class="space-y-6">
+        <!-- Heading -->
+        <h2
+          id="world-presence-heading"
+          data-text-reveal
+          class="font-sora text-[clamp(2.5rem,5.5vw,4rem)] font-normal leading-[1.08] tracking-tight text-[#010101]"
+        >
+          Urbanland <br class="hidden xl:inline" /><span class="italic text-[#14743A] font-semibold">in the world</span>
+        </h2>
 
-      <!-- Body + CTA pushed to the bottom -->
-      <div class="space-y-8">
+        <!-- Body text -->
         <p
           data-text-reveal
           data-delay="0.2"
-          class="font-inter-tight text-base md:text-lg text-[#010101]/65 leading-relaxed"
+          class="font-inter-tight text-base md:text-lg text-[#010101]/65 leading-relaxed max-w-[340px]"
         >
           Streets and parks around the world. This is a challenge we accept with both pride and responsibility. We create with a love for public space.
         </p>
 
+        <!-- Stats Grid -->
+        <div data-opai-animate data-delay="0.3" class="grid grid-cols-3 gap-4 border-t border-[#010101]/10 pt-8 mt-6">
+          <div class="space-y-1">
+            <div class="font-sora text-2xl md:text-3xl font-semibold text-[#14743A]">50+</div>
+            <div class="font-inter text-[10px] uppercase tracking-wider text-[#010101]/50 leading-tight">Landmark Projects</div>
+          </div>
+          <div class="space-y-1">
+            <div class="font-sora text-2xl md:text-3xl font-semibold text-[#8C3721]">15+</div>
+            <div class="font-inter text-[10px] uppercase tracking-wider text-[#010101]/50 leading-tight">Cities Served</div>
+          </div>
+          <div class="space-y-1">
+            <div class="font-sora text-2xl md:text-3xl font-semibold text-[#14743A]">2Y</div>
+            <div class="font-inter text-[10px] uppercase tracking-wider text-[#010101]/50 leading-tight">Guarantee Period</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Swiper Navigation Arrows & Explore CTA -->
+      <div class="space-y-6">
+        <div data-opai-animate data-delay="0.4" class="hidden lg:flex items-center gap-3">
+          <button
+            id="proj-prev"
+            class="flex size-12 items-center justify-center rounded-full border border-[#010101]/15 bg-white text-[#010101] shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#14743A] hover:text-white hover:border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#14743A]"
+            aria-label="Previous project"
+          >
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M19 12H5M12 19l-7-7 7-7"/>
+            </svg>
+          </button>
+          <button
+            id="proj-next"
+            class="flex size-12 items-center justify-center rounded-full border border-[#010101]/15 bg-white text-[#010101] shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#14743A] hover:text-white hover:border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#14743A]"
+            aria-label="Next project"
+          >
+            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14m-7-7 7 7-7 7"/>
+            </svg>
+          </button>
+        </div>
+
         <a
           href="./case-studies.html"
-          class="group inline-flex items-center gap-4 bg-[#010101] px-8 py-4 text-white transition-all duration-300 hover:bg-[#14743A]"
+          class="group inline-flex items-center gap-4 bg-[#010101] px-8 py-4 text-white transition-all duration-300 hover:bg-[#14743A] w-fit"
           style="border-radius: 9px;"
         >
           <span class="font-sora text-base font-medium">Our projects</span>
@@ -38,97 +78,127 @@
     </div>
 
     <!-- Right Slider — flush edge cards -->
-    <div class="relative flex-1 overflow-hidden">
+    <div class="relative flex-1 overflow-hidden lg:pl-10 w-full">
       <div
         id="project-track"
-        class="flex gap-4 overflow-x-auto pb-0 px-4 lg:px-0"
+        class="group/track flex gap-6 overflow-x-auto pb-10 px-6 lg:px-0 scroll-smooth"
         style="scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; cursor: grab;"
       >
 
         <!-- Project 1 -->
         <div
-          class="relative min-w-[260px] md:min-w-[360px] xl:min-w-[420px] overflow-hidden group shrink-0"
-          style="border-radius: 9px; aspect-ratio: 3/4; scroll-snap-align: start;"
+          class="relative min-w-[285px] md:min-w-[380px] xl:min-w-[440px] overflow-hidden group shrink-0 transition-all duration-500 rounded-[16px] aspect-[3/4] scroll-snap-align: start group-hover/track:opacity-40 group-hover/track:blur-[2px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-20 hover:shadow-[0_30px_60px_rgba(0,0,0,0.25)]"
         >
-          <img src="./images/projects/project-1.png" alt="Vltava Areal" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          <!-- top-to-bottom gradient for title readability -->
-          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50"></div>
-          <!-- Title at TOP -->
-          <div class="absolute top-6 left-6 right-6 text-white">
-            <h3 class="font-sora text-2xl md:text-3xl font-normal leading-tight">Vltava Areal</h3>
+          <img src="./images/projects/project-1.png" alt="Vltava Areal" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <!-- gradient overlay -->
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40"></div>
+          
+          <!-- Pulse Hotspot + Geo Tag -->
+          <div class="absolute top-6 left-6 flex items-center gap-2 rounded-full border border-white/15 bg-black/35 px-3 py-1.5 backdrop-blur-md transition-transform duration-500 group-hover:translate-y-[-2px]">
+            <span class="relative flex size-2 shrink-0">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#14743A] opacity-75"></span>
+              <span class="relative inline-flex size-2 rounded-full bg-[#14743A]"></span>
+            </span>
+            <span class="font-ibm-plex-mono text-[9px] font-medium tracking-wider text-white/90">48.97° N, 14.47° E</span>
           </div>
-          <!-- Product tag + location at BOTTOM -->
-          <div class="absolute bottom-6 left-6 flex items-center gap-3 text-white/80">
-            <span class="font-inter-tight text-xs uppercase tracking-[0.18em]">RIVAGE</span>
-            <span class="size-1 rounded-full bg-white/60"></span>
-            <span class="font-inter-tight text-xs uppercase tracking-[0.18em]">České Budějovice</span>
+
+          <!-- Bottom Content (Title & Spec reveals) -->
+          <div class="absolute bottom-8 left-8 right-8 flex flex-col gap-3 text-white">
+            <h3 class="font-sora text-2xl md:text-3xl font-semibold leading-tight tracking-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-500">Vltava Areal</h3>
+            <div class="flex items-center gap-2.5 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-75">
+              <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#14743A] bg-white/95 px-2.5 py-1 rounded-[4px]">RIVAGE</span>
+              <span class="size-1 rounded-full bg-white/40"></span>
+              <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">České Budějovice</span>
+            </div>
           </div>
         </div>
 
         <!-- Project 2 -->
         <div
-          class="relative min-w-[260px] md:min-w-[360px] xl:min-w-[420px] overflow-hidden group shrink-0"
-          style="border-radius: 9px; aspect-ratio: 3/4; scroll-snap-align: start;"
+          class="relative min-w-[285px] md:min-w-[380px] xl:min-w-[440px] overflow-hidden group shrink-0 transition-all duration-500 rounded-[16px] aspect-[3/4] scroll-snap-align: start group-hover/track:opacity-40 group-hover/track:blur-[2px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-20 hover:shadow-[0_30px_60px_rgba(0,0,0,0.25)]"
         >
-          <img src="./images/projects/banner-1.png" alt="Urban Park Life" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50"></div>
-          <div class="absolute top-6 left-6 right-6 text-white">
-            <h3 class="font-sora text-2xl md:text-3xl font-normal leading-tight">Urban Park Life</h3>
+          <img src="./images/projects/banner-1.png" alt="Urban Park Life" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40"></div>
+          
+          <div class="absolute top-6 left-6 flex items-center gap-2 rounded-full border border-white/15 bg-black/35 px-3 py-1.5 backdrop-blur-md transition-transform duration-500 group-hover:translate-y-[-2px]">
+            <span class="relative flex size-2 shrink-0">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#8C3721] opacity-75"></span>
+              <span class="relative inline-flex size-2 rounded-full bg-[#8C3721]"></span>
+            </span>
+            <span class="font-ibm-plex-mono text-[9px] font-medium tracking-wider text-white/90">40.78° N, 73.96° W</span>
           </div>
-          <div class="absolute bottom-6 left-6 flex items-center gap-3 text-white/80">
-            <span class="font-inter-tight text-xs uppercase tracking-[0.18em]">BENCH</span>
-            <span class="size-1 rounded-full bg-white/60"></span>
-            <span class="font-inter-tight text-xs uppercase tracking-[0.18em]">Central Park</span>
+
+          <div class="absolute bottom-8 left-8 right-8 flex flex-col gap-3 text-white">
+            <h3 class="font-sora text-2xl md:text-3xl font-semibold leading-tight tracking-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-500">Urban Park Life</h3>
+            <div class="flex items-center gap-2.5 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-75">
+              <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C3721] bg-white/95 px-2.5 py-1 rounded-[4px]">BENCH</span>
+              <span class="size-1 rounded-full bg-white/40"></span>
+              <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">Central Park</span>
+            </div>
           </div>
-          <!-- Next arrow floats on this card like the reference -->
-          <button
-            id="proj-next"
-            class="absolute right-5 top-1/2 -translate-y-1/2 z-10 flex size-12 items-center justify-center rounded-full bg-white text-[#010101] shadow-xl transition-all hover:scale-110 hover:bg-[#010101] hover:text-white"
-            aria-label="Next project"
-          >
-            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14m-7-7 7 7-7 7"/>
-            </svg>
-          </button>
         </div>
 
         <!-- Project 3 -->
         <div
-          class="relative min-w-[260px] md:min-w-[360px] xl:min-w-[420px] overflow-hidden group shrink-0"
-          style="border-radius: 9px; aspect-ratio: 3/4; scroll-snap-align: start;"
+          class="relative min-w-[285px] md:min-w-[380px] xl:min-w-[440px] overflow-hidden group shrink-0 transition-all duration-500 rounded-[16px] aspect-[3/4] scroll-snap-align: start group-hover/track:opacity-40 group-hover/track:blur-[2px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-20 hover:shadow-[0_30px_60px_rgba(0,0,0,0.25)]"
         >
-          <img src="./images/projects/project-2.png" alt="Chotýčany" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50"></div>
-          <div class="absolute top-6 left-6 right-6 text-white">
-            <h3 class="font-sora text-2xl md:text-3xl font-normal leading-tight">Chotýčany</h3>
+          <img src="./images/projects/project-2.png" alt="Chotýčany" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40"></div>
+          
+          <div class="absolute top-6 left-6 flex items-center gap-2 rounded-full border border-white/15 bg-black/35 px-3 py-1.5 backdrop-blur-md transition-transform duration-500 group-hover:translate-y-[-2px]">
+            <span class="relative flex size-2 shrink-0">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#14743A] opacity-75"></span>
+              <span class="relative inline-flex size-2 rounded-full bg-[#14743A]"></span>
+            </span>
+            <span class="font-ibm-plex-mono text-[9px] font-medium tracking-wider text-white/90">49.07° N, 14.51° E</span>
           </div>
-          <div class="absolute bottom-6 left-6 flex items-center gap-3 text-white/80">
-            <span class="font-inter-tight text-xs uppercase tracking-[0.18em]">CUBY</span>
-            <span class="size-1 rounded-full bg-white/60"></span>
-            <span class="font-inter-tight text-xs uppercase tracking-[0.18em]">České Budějovice</span>
+
+          <div class="absolute bottom-8 left-8 right-8 flex flex-col gap-3 text-white">
+            <h3 class="font-sora text-2xl md:text-3xl font-semibold leading-tight tracking-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-500">Chotýčany</h3>
+            <div class="flex items-center gap-2.5 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-75">
+              <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#14743A] bg-white/95 px-2.5 py-1 rounded-[4px]">CUBY</span>
+              <span class="size-1 rounded-full bg-white/40"></span>
+              <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">České Budějovice</span>
+            </div>
           </div>
         </div>
 
         <!-- Project 4 -->
         <div
-          class="relative min-w-[260px] md:min-w-[360px] xl:min-w-[420px] overflow-hidden group shrink-0"
-          style="border-radius: 9px; aspect-ratio: 3/4; scroll-snap-align: start;"
+          class="relative min-w-[285px] md:min-w-[380px] xl:min-w-[440px] overflow-hidden group shrink-0 transition-all duration-500 rounded-[16px] aspect-[3/4] scroll-snap-align: start group-hover/track:opacity-40 group-hover/track:blur-[2px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-20 hover:shadow-[0_30px_60px_rgba(0,0,0,0.25)]"
         >
-          <img src="./images/projects/banner-2.png" alt="City Plaza" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-105" />
-          <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/50"></div>
-          <div class="absolute top-6 left-6 right-6 text-white">
-            <h3 class="font-sora text-2xl md:text-3xl font-normal leading-tight">City Plaza</h3>
+          <img src="./images/projects/banner-2.png" alt="City Plaza" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40"></div>
+          
+          <div class="absolute top-6 left-6 flex items-center gap-2 rounded-full border border-white/15 bg-black/35 px-3 py-1.5 backdrop-blur-md transition-transform duration-500 group-hover:translate-y-[-2px]">
+            <span class="relative flex size-2 shrink-0">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#8C3721] opacity-75"></span>
+              <span class="relative inline-flex size-2 rounded-full bg-[#8C3721]"></span>
+            </span>
+            <span class="font-ibm-plex-mono text-[9px] font-medium tracking-wider text-white/90">18.92° N, 72.83° E</span>
           </div>
-          <div class="absolute bottom-6 left-6 flex items-center gap-3 text-white/80">
-            <span class="font-inter-tight text-xs uppercase tracking-[0.18em]">SHELTER</span>
-            <span class="size-1 rounded-full bg-white/60"></span>
-            <span class="font-inter-tight text-xs uppercase tracking-[0.18em]">Downtown Square</span>
+
+          <div class="absolute bottom-8 left-8 right-8 flex flex-col gap-3 text-white">
+            <h3 class="font-sora text-2xl md:text-3xl font-semibold leading-tight tracking-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-500">City Plaza</h3>
+            <div class="flex items-center gap-2.5 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-75">
+              <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C3721] bg-white/95 px-2.5 py-1 rounded-[4px]">SHELTER</span>
+              <span class="size-1 rounded-full bg-white/40"></span>
+              <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">Downtown Square</span>
+            </div>
           </div>
         </div>
 
       </div>
     </div>
 
+  </div>
+
+  <!-- Custom Floating Cursor Follower -->
+  <div
+    id="custom-cursor"
+    class="pointer-events-none fixed z-[9999] hidden lg:flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#14743A]/90 text-white opacity-0 scale-0 shadow-lg backdrop-blur-sm transition-all duration-300 ease-out pointer-events-none"
+  >
+    <span class="font-sora text-[9px] font-bold uppercase tracking-widest">Drag</span>
   </div>
 </section>
 
@@ -141,19 +211,53 @@
   (function() {
     const track = document.getElementById('project-track');
     const nextBtn = document.getElementById('proj-next');
+    const prevBtn = document.getElementById('proj-prev');
+    const cursor = document.getElementById('custom-cursor');
     if (!track) return;
 
+    // Smooth Button Scrolling Controls
     if (nextBtn) {
       nextBtn.addEventListener('click', () => {
         const card = track.firstElementChild;
-        const gap = 16;
-        const cardWidth = card ? card.offsetWidth + gap : 380;
+        const gap = 24;
+        const cardWidth = card ? card.offsetWidth + gap : 400;
         const maxScroll = track.scrollWidth - track.clientWidth;
-        if (track.scrollLeft >= maxScroll - 10) {
+        if (track.scrollLeft >= maxScroll - 15) {
           track.scrollTo({ left: 0, behavior: 'smooth' });
         } else {
           track.scrollBy({ left: cardWidth, behavior: 'smooth' });
         }
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener('click', () => {
+        const card = track.firstElementChild;
+        const gap = 24;
+        const cardWidth = card ? card.offsetWidth + gap : 400;
+        if (track.scrollLeft <= 15) {
+          track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
+        } else {
+          track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+        }
+      });
+    }
+
+    // Custom Cursor Follower Events
+    if (cursor) {
+      track.addEventListener('mouseenter', () => {
+        cursor.style.opacity = '1';
+        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+      });
+
+      track.addEventListener('mouseleave', () => {
+        cursor.style.opacity = '0';
+        cursor.style.transform = 'translate(-50%, -50%) scale(0)';
+      });
+
+      track.addEventListener('mousemove', (e) => {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
       });
     }
 
@@ -164,12 +268,30 @@
       track.classList.add('dragging');
       startX = e.pageX - track.offsetLeft;
       scrollLeft = track.scrollLeft;
+      if (cursor) {
+        cursor.style.transform = 'translate(-50%, -50%) scale(0.85)';
+        cursor.style.backgroundColor = 'rgba(140, 55, 33, 0.9)';
+        cursor.firstElementChild.innerText = 'Swipe';
+      }
     });
-    document.addEventListener('mouseup', () => { isDown = false; track.classList.remove('dragging'); });
+
+    document.addEventListener('mouseup', () => {
+      if (!isDown) return;
+      isDown = false;
+      track.classList.remove('dragging');
+      if (cursor) {
+        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
+        cursor.style.backgroundColor = 'rgba(20, 116, 58, 0.9)';
+        cursor.firstElementChild.innerText = 'Drag';
+      }
+    });
+
     track.addEventListener('mousemove', (e) => {
       if (!isDown) return;
       e.preventDefault();
-      track.scrollLeft = scrollLeft - (e.pageX - track.offsetLeft - startX);
+      const x = e.pageX - track.offsetLeft;
+      const walk = (x - startX) * 1.5; // Scroll speed multiplier
+      track.scrollLeft = scrollLeft - walk;
     });
   })();
 </script>
