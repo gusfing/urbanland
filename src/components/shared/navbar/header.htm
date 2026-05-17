@@ -73,5 +73,17 @@ Header
     window.addEventListener('scroll', updateHeaderState, { passive: true });
     // Run once on load to set initial state correctly
     updateHeaderState();
+    
+    // Direct robust click listener for opening the drawer
+    if (hamburgerBtn) {
+      hamburgerBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        const sidebar = document.querySelector('.sidebar');
+        if (sidebar) {
+          sidebar.classList.add('show-sidebar');
+          document.body.classList.add('overflow-hidden');
+        }
+      });
+    }
   })();
 </script>

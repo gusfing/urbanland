@@ -208,6 +208,24 @@ Mobile Menu
       const menuHeader = sidebar.querySelector('.mobile-drawer-header');
       const menuItems = sidebar.querySelectorAll('.animate-menu-item');
       const menuFooter = sidebar.querySelector('.mobile-drawer-footer');
+      const closeBtn = sidebar.querySelector('.nav-hamburger-close');
+      
+      // Robust direct close listener
+      if (closeBtn) {
+        closeBtn.addEventListener('click', (e) => {
+          e.preventDefault();
+          sidebar.classList.remove('show-sidebar');
+          document.body.classList.remove('overflow-hidden');
+        });
+      }
+
+      // Close when clicking outside of the drawer contents
+      sidebar.addEventListener('click', (e) => {
+        if (e.target === sidebar) {
+          sidebar.classList.remove('show-sidebar');
+          document.body.classList.remove('overflow-hidden');
+        }
+      });
       
       function setInitialState() {
         if (typeof gsap === 'undefined') return;
