@@ -1,89 +1,343 @@
 <!-- =========================
-Header
+Header (Expanding Rounded Menu)
 ===========================-->
 <header id="site-header" class="fixed top-4 left-1/2 z-50 w-[calc(100%-2rem)] max-w-[1440px] -translate-x-1/2 transition-all duration-300">
-  <div id="header-container" class="flex items-center justify-between rounded-[9px] border border-transparent bg-transparent px-6 py-3 transition-all duration-300">
-    
-    <!-- Left: Logo -->
-    <div class="flex-1 flex justify-start">
-      <a href="./index.html" class="flex items-center">
-        <span class="sr-only">Urbanland</span>
-        <img id="header-logo" src="./images/shared/urbanland-logo.png" alt="Urbanland" class="h-6 w-auto transition-all duration-300 hover:scale-[1.02] brightness-0 invert drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]" />
-      </a>
-    </div>
-
-    <!-- Center: Brand Icon -->
-    <div class="flex-1 flex justify-center">
-      <img id="center-brand-icon" src="./images/shared/center-icon.png" alt="Urbanland Icon" class="h-7 w-auto transition-all duration-300 hover:scale-[1.05] brightness-0 invert drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]" />
-    </div>
-
-    <!-- Right: Menu Button -->
-    <div class="flex-1 flex justify-end">
-      <button class="nav-hamburger flex items-center gap-1.5 cursor-pointer font-inter text-[11px] font-semibold uppercase tracking-[0.25em] text-white transition-all duration-300 hover:opacity-75 drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]" id="hamburger-btn" aria-label="Menu">
-        <span class="text-sm font-light leading-none" id="hamburger-plus">+</span>
-        <span class="leading-none">Menu</span>
-      </button>
-    </div>
-    
+  
+  <!-- Backdrop Cover overlay for unreveal effect -->
+  <div class="cover-wrap absolute inset-0 -z-20 pointer-events-none opacity-0 transition-opacity duration-300">
+    <div class="cover w-full h-[85vh] rounded-[2rem] overflow-hidden bg-black/50 backdrop-blur-md border border-white/5"></div>
   </div>
-  <Component src="src/components/shared/mobile-menu.htm" />
+
+  <div class="menu w-full relative">
+    
+    <!-- Top Pill Bar -->
+    <div id="header-container" class="menu__top flex items-center justify-between rounded-[2rem] border border-white/5 bg-[#0a0a0a]/90 px-6 py-3.5 shadow-[0_8px_32px_rgba(0,0,0,0.15)] backdrop-blur-xl transition-all duration-300">
+      
+      <!-- Left: Logo -->
+      <div class="flex items-center">
+        <a href="./index.html" class="flex items-center">
+          <span class="sr-only">Urbanland</span>
+          <img id="header-logo" src="./images/shared/urbanland-logo.png" alt="Urbanland" class="h-6 w-auto transition-all duration-300 hover:scale-[1.02] brightness-0 invert" />
+        </a>
+      </div>
+
+      <!-- Center: Navigation Links (Clicking these triggers the slide-down menu) -->
+      <nav class="menu__nav-top hidden md:flex items-center gap-8">
+        <a href="#" class="line-link font-inter text-[11px] font-semibold uppercase tracking-[0.25em] text-white">Products</a>
+        <a href="#" class="line-link font-inter text-[11px] font-semibold uppercase tracking-[0.25em] text-white">Solutions</a>
+        <a href="#" class="line-link font-inter text-[11px] font-semibold uppercase tracking-[0.25em] text-white">Projects</a>
+        <a href="#" class="line-link font-inter text-[11px] font-semibold uppercase tracking-[0.25em] text-white">Company</a>
+      </nav>
+
+      <!-- Right: Toggle Trigger -->
+      <div class="flex items-center gap-4">
+        <button id="hamburger-btn" class="nav-hamburger flex items-center gap-1.5 cursor-pointer font-inter text-[11px] font-semibold uppercase tracking-[0.25em] text-white hover:opacity-75" aria-label="Menu">
+          <span class="text-sm font-light leading-none" id="hamburger-plus">+</span>
+          <span class="leading-none">Menu</span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Dropdown Content Sheet -->
+    <div class="menu__content-wrap w-full overflow-hidden mt-2 pointer-events-none">
+      <div class="menu__content transform -translate-y-full opacity-0 rounded-[2rem] border border-white/5 bg-[#0a0a0a]/95 p-8 backdrop-blur-3xl transition-all duration-500 flex flex-col md:flex-row justify-between gap-8">
+        
+        <!-- Multi-column submenus -->
+        <div class="menu__nav-content flex-grow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Products Column -->
+          <div class="column space-y-4">
+            <h4 class="font-sora text-[11px] font-bold uppercase tracking-[0.25em] text-[#E8611A]">Products</h4>
+            <ul class="space-y-3.5 pl-4 border-l border-white/5">
+              <li>
+                <a href="./products.html" class="line-link text-xs text-white/50 hover:text-white transition-colors duration-300">
+                  Benches &amp; Planters
+                </a>
+              </li>
+              <li>
+                <a href="./products.html" class="line-link text-xs text-white/50 hover:text-white transition-colors duration-300">
+                  Bus Shelters &amp; Dustbins
+                </a>
+              </li>
+              <li>
+                <a href="./products.html" class="line-link text-xs text-white/50 hover:text-white transition-colors duration-300">
+                  Canteen &amp; Wicker Sets
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Solutions Column -->
+          <div class="column space-y-4">
+            <h4 class="font-sora text-[11px] font-bold uppercase tracking-[0.25em] text-[#E8611A]">Solutions</h4>
+            <ul class="space-y-3.5 pl-4 border-l border-white/5">
+              <li>
+                <a href="./solutions.html" class="line-link text-xs text-white/50 hover:text-white transition-colors duration-300">
+                  Real Estate &amp; Townships
+                </a>
+              </li>
+              <li>
+                <a href="./solutions.html" class="line-link text-xs text-white/50 hover:text-white transition-colors duration-300">
+                  Hotels &amp; Resorts
+                </a>
+              </li>
+              <li>
+                <a href="./solutions.html" class="line-link text-xs text-white/50 hover:text-white transition-colors duration-300">
+                  Municipal &amp; Smart Cities
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Projects Column -->
+          <div class="column space-y-4">
+            <h4 class="font-sora text-[11px] font-bold uppercase tracking-[0.25em] text-[#E8611A]">Projects</h4>
+            <ul class="space-y-3.5 pl-4 border-l border-white/5">
+              <li>
+                <a href="./case-studies.html" class="line-link text-xs text-white/50 hover:text-white transition-colors duration-300">
+                  Landmark Projects
+                </a>
+              </li>
+              <li>
+                <a href="./testimonials.html" class="line-link text-xs text-white/50 hover:text-white transition-colors duration-300">
+                  Client Reviews
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Company Column -->
+          <div class="column space-y-4">
+            <h4 class="font-sora text-[11px] font-bold uppercase tracking-[0.25em] text-[#E8611A]">Company</h4>
+            <ul class="space-y-3.5 pl-4 border-l border-white/5">
+              <li>
+                <a href="./about.html" class="line-link text-xs text-white/50 hover:text-white transition-colors duration-300">
+                  About Us
+                </a>
+              </li>
+              <li>
+                <a href="./contact.html" class="line-link text-xs text-white/50 hover:text-white transition-colors duration-300">
+                  Contact Us
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Right Side: Close Button / arrow & metadata -->
+        <div class="flex flex-col justify-between items-end gap-8 min-w-[220px] border-t md:border-t-0 md:border-l border-white/5 pt-6 md:pt-0 md:pl-6">
+          <button class="menu__back flex items-center justify-center bg-white/5 hover:bg-white/10 border border-white/10 size-12 rounded-full cursor-pointer transition-all duration-300 hover:scale-105" aria-label="Close Menu">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-chevron-up"><path d="m18 15-6-6-6 6"/></svg>
+          </button>
+          
+          <div class="text-right space-y-2">
+            <p class="font-mono text-[9px] text-[#E8611A] tracking-widest uppercase font-bold">DESIGN CONSULTATIONS</p>
+            <p class="font-inter text-xs text-white/70">kunal@kawaki.co.in</p>
+            <p class="font-inter text-[10px] text-white/30 tracking-wide pt-1">★ ISO 9001:2015 Certified</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
 </header>
 
+<!-- Styles for Hover Line Effect -->
+<style>
+  .line-link {
+    white-space: nowrap;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+  }
+  .line-link::before {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    position: absolute;
+    top: 95%;
+    transition: transform 0.3s ease;
+    transform-origin: 0% 50%;
+    transform: scaleX(0);
+  }
+  .line-link:hover::before {
+    transform: scaleX(1);
+    transform-origin: 100% 50%;
+  }
+</style>
+
+<!-- Expanding Rounded Menu Javascript -->
 <script>
   (function() {
+    const siteHeader = document.getElementById('site-header');
+    if (!siteHeader) return;
+
     const container = document.getElementById('header-container');
     const logo = document.getElementById('header-logo');
-    const centerIcon = document.getElementById('center-brand-icon');
     const hamburgerBtn = document.getElementById('hamburger-btn');
-    
+    const menuLinks = siteHeader.querySelectorAll('.menu__nav-top .line-link');
+    const menuContentWrap = siteHeader.querySelector('.menu__content-wrap');
+    const menuContent = siteHeader.querySelector('.menu__content');
+    const closeBtn = siteHeader.querySelector('.menu__back');
+    const coverWrap = siteHeader.querySelector('.cover-wrap');
+
+    let isOpen = false;
+    let isAnimating = false;
+
+    // Helper to control scroll transparency of the top bar
     function updateHeaderState() {
+      if (isOpen) return; // Keep dark glass theme when menu is open
+
       if (window.scrollY > 50) {
-        // Scrolled state - solid white, small shadow, and blur
-        container.classList.remove('bg-transparent', 'border-transparent', 'hover:bg-white/10');
-        container.classList.add('bg-white/95', 'border-[#1A1A1A]/10', 'shadow-md', 'backdrop-blur-xl');
-        
-        logo.classList.remove('brightness-0', 'invert', 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]');
-        
-        if (centerIcon) {
-          centerIcon.classList.remove('brightness-0', 'invert', 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]');
-        }
+        container.classList.remove('bg-[#0a0a0a]/90', 'border-white/5');
+        container.classList.add('bg-white/95', 'border-[#1A1A1A]/10', 'shadow-md');
+        logo.classList.remove('brightness-0', 'invert');
         
         if (hamburgerBtn) {
-          hamburgerBtn.classList.remove('text-white', 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]');
+          hamburgerBtn.classList.remove('text-white');
           hamburgerBtn.classList.add('text-[#1A1A1A]');
         }
+        menuLinks.forEach(link => {
+          link.classList.remove('text-white');
+          link.classList.add('text-[#1A1A1A]');
+        });
       } else {
-        // Top state - completely transparent, no shadow, no blur
-        container.classList.add('bg-transparent', 'border-transparent', 'hover:bg-white/10');
-        container.classList.remove('bg-white/95', 'border-[#1A1A1A]/10', 'shadow-md', 'backdrop-blur-xl');
-        
-        logo.classList.add('brightness-0', 'invert', 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]');
-        
-        if (centerIcon) {
-          centerIcon.classList.add('brightness-0', 'invert', 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]');
-        }
-        
+        container.classList.add('bg-[#0a0a0a]/90', 'border-white/5');
+        container.classList.remove('bg-white/95', 'border-[#1A1A1A]/10', 'shadow-md');
+        logo.classList.add('brightness-0', 'invert');
+
         if (hamburgerBtn) {
-          hamburgerBtn.classList.add('text-white', 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]');
+          hamburgerBtn.classList.add('text-white');
           hamburgerBtn.classList.remove('text-[#1A1A1A]');
         }
+        menuLinks.forEach(link => {
+          link.classList.add('text-white');
+          link.classList.remove('text-[#1A1A1A]');
+        });
       }
     }
-    
+
     window.addEventListener('scroll', updateHeaderState, { passive: true });
-    // Run once on load to set initial state correctly
     updateHeaderState();
-    
-    // Direct robust click listener for opening the drawer
+
+    // GSAP Timeline setup
+    let timeline = null;
+
+    function initTimeline() {
+      if (typeof gsap === 'undefined') return;
+
+      timeline = gsap.timeline({
+        paused: true,
+        onComplete: () => { isAnimating = false; },
+        onReverseComplete: () => { 
+          isAnimating = false; 
+          menuContentWrap.classList.add('pointer-events-none');
+          coverWrap.classList.add('pointer-events-none');
+          updateHeaderState();
+        },
+        defaults: {
+          duration: 0.7,
+          ease: 'power3.inOut'
+        }
+      });
+
+      timeline
+        .addLabel('start', 0)
+        .to(coverWrap, {
+          opacity: 1,
+          duration: 0.3
+        }, 'start')
+        .fromTo(menuContent, {
+          y: '-100%',
+          opacity: 0
+        }, {
+          y: '0%',
+          opacity: 1,
+          duration: 0.7
+        }, 'start')
+        .to(container, {
+          backgroundColor: 'rgba(10, 10, 10, 0.95)',
+          borderColor: 'rgba(255, 255, 255, 0.05)',
+          duration: 0.3
+        }, 'start')
+        .add(() => {
+          // Flip text states inside container
+          logo.classList.add('brightness-0', 'invert');
+          if (hamburgerBtn) {
+            hamburgerBtn.classList.add('text-white');
+            hamburgerBtn.classList.remove('text-[#1A1A1A]');
+          }
+          menuLinks.forEach(link => {
+            link.classList.add('text-white');
+            link.classList.remove('text-[#1A1A1A]');
+          });
+        }, 'start');
+    }
+
+    function expandMenu() {
+      if (isAnimating || isOpen) return;
+      isAnimating = true;
+      isOpen = true;
+
+      menuContentWrap.classList.remove('pointer-events-none');
+      coverWrap.classList.remove('pointer-events-none');
+
+      if (!timeline) initTimeline();
+      if (timeline) {
+        timeline.play();
+      } else {
+        // Fallback without GSAP
+        menuContent.style.transform = 'translateY(0%)';
+        menuContent.style.opacity = '1';
+        isAnimating = false;
+      }
+    }
+
+    function collapseMenu() {
+      if (isAnimating || !isOpen) return;
+      isAnimating = true;
+      isOpen = false;
+
+      if (timeline) {
+        timeline.reverse();
+      } else {
+        // Fallback without GSAP
+        menuContent.style.transform = 'translateY(-100%)';
+        menuContent.style.opacity = '0';
+        menuContentWrap.classList.add('pointer-events-none');
+        coverWrap.classList.add('pointer-events-none');
+        updateHeaderState();
+        isAnimating = false;
+      }
+    }
+
+    // Trigger on clicking hamburger or top nav links
     if (hamburgerBtn) {
       hamburgerBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        const sidebar = document.querySelector('.sidebar');
-        if (sidebar) {
-          sidebar.classList.add('show-sidebar');
-          document.body.classList.add('overflow-hidden');
-        }
+        if (isOpen) collapseMenu();
+        else expandMenu();
       });
     }
+
+    menuLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        expandMenu();
+      });
+    });
+
+    if (closeBtn) {
+      closeBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        collapseMenu();
+      });
+    }
+
   })();
 </script>
