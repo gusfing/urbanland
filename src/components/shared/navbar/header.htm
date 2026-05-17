@@ -2,7 +2,7 @@
 Header
 ===========================-->
 <header id="site-header" class="fixed top-4 left-1/2 z-50 w-[calc(100%-2rem)] max-w-[1440px] -translate-x-1/2 transition-all duration-300">
-  <div id="header-container" class="flex items-center justify-between rounded-[9px] border border-transparent bg-transparent px-6 py-3 shadow-[0_8px_32px_rgba(0,0,0,0.1)] backdrop-blur-xl transition-all duration-300 hover:bg-white/20">
+  <div id="header-container" class="flex items-center justify-between rounded-[9px] border border-transparent bg-transparent px-6 py-3 transition-all duration-300">
     
     <!-- Left: Logo -->
     <div class="flex-shrink-0">
@@ -66,9 +66,9 @@ Header
     
     function updateHeaderState() {
       if (window.scrollY > 50) {
-        // Scrolled state - solid white
+        // Scrolled state - solid white, small shadow, and blur
         container.classList.remove('bg-transparent', 'border-transparent', 'hover:bg-white/10');
-        container.classList.add('bg-white/95', 'border-[#1A1A1A]/10', 'shadow-md');
+        container.classList.add('bg-white/95', 'border-[#1A1A1A]/10', 'shadow-md', 'backdrop-blur-xl');
         
         logo.classList.remove('brightness-0', 'invert');
         
@@ -82,9 +82,9 @@ Header
           hamburgerBtn.classList.add('text-[#1A1A1A]', 'border-[#1A1A1A]/20', 'bg-transparent', 'hover:bg-black/5');
         }
       } else {
-        // Top state - completely transparent
+        // Top state - completely transparent, no shadow, no blur
         container.classList.add('bg-transparent', 'border-transparent', 'hover:bg-white/10');
-        container.classList.remove('bg-white/95', 'border-[#1A1A1A]/10', 'shadow-md');
+        container.classList.remove('bg-white/95', 'border-[#1A1A1A]/10', 'shadow-md', 'backdrop-blur-xl');
         
         logo.classList.add('brightness-0', 'invert');
         
