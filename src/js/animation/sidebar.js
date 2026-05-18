@@ -6,20 +6,23 @@ const sidebarAnimation = {
   tl: null,
 
   init() {
+    console.log('[Sidebar Debug] init() called');
     try {
       if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => {
+          console.log('[Sidebar Debug] DOMContentLoaded event fired');
           this.cacheElements();
           this.initTimeline();
           this.bindEvents();
         });
       } else {
+        console.log('[Sidebar Debug] DOM already loaded/interactive');
         this.cacheElements();
         this.initTimeline();
         this.bindEvents();
       }
     } catch (error) {
-      console.error('Sidebar animation initialization failed:', error);
+      console.error('[Sidebar Debug] Sidebar animation initialization failed:', error);
     }
   },
 
@@ -33,15 +36,28 @@ const sidebarAnimation = {
       closeBtn: document.querySelector('.sidebar .nav-hamburger-close'),
       bottomItems: document.querySelectorAll('.sidebar .border-t p, .sidebar .border-t a, .sidebar .border-t span'),
     };
+    console.log('[Sidebar Debug] cacheElements:', {
+      navHamburger: !!this.elements.navHamburger,
+      navHamburgerClose: !!this.elements.navHamburgerClose,
+      sidebar: !!this.elements.sidebar,
+      navItemsCount: this.elements.navItems?.length,
+      rightCol: !!this.elements.rightCol,
+      closeBtn: !!this.elements.closeBtn,
+      bottomItemsCount: this.elements.bottomItems?.length
+    });
   },
 
   initTimeline() {
     const { sidebar, navItems, rightCol, closeBtn, bottomItems } = this.elements;
     
     // Check if gsap is available globally
-    if (sidebar && typeof window !== 'undefined' && (window.gsap || typeof gsap !== 'undefined')) {
+    const hasGsap = typeof window !== 'undefined' && (window.gsap || typeof gsap !== 'undefined');
+    console.log('[Sidebar Debug] initTimeline - GSAP available:', hasGsap);
+    
+    if (sidebar && hasGsap) {
       const gsapInstance = window.gsap || gsap;
 
+      console.log('[Sidebar Debug] Initializing GSAP Timeline');
       // Initialize initial state via GSAP to ensure smooth override of inline HTML styles
       gsapInstance.set(sidebar, { xPercent: 100, autoAlpha: 0 });
 
@@ -99,6 +115,7 @@ const sidebarAnimation = {
         }, '-=0.35');
       }
     } else if (sidebar) {
+      console.log('[Sidebar Debug] Falling back to CSS transitions (no GSAP)');
       // Add fallback class if GSAP is not loaded
       sidebar.classList.add('sidebar-fallback');
     }
@@ -107,28 +124,46 @@ const sidebarAnimation = {
   bindEvents() {
     const { navHamburger, navHamburgerClose, sidebar } = this.elements;
 
+    console.log('[Sidebar Debug] bindEvents setup:', {
+      hasNavHamburger: !!navHamburger,
+      hasNavHamburgerClose: !!navHamburgerClose,
+      hasSidebar: !!sidebar
+    });
+
     if (navHamburger && sidebar) {
-      navHamburger.addEventListener('click', () => {
+      console.log('[Sidebar Debug] Binding click listener to navHamburger');
+      navHamburger.addEventListener('click', (e) => {
+        console.log('[Sidebar Debug] navHamburger clicked!');
         document.body.classList.add('overflow-hidden');
         if (this.tl) {
+          console.log('[Sidebar Debug] Playing GSAP Timeline');
           this.tl.play();
         } else {
+          console.log('[Sidebar Debug] Timeline missing, showing via class');
           // Fallback to CSS classes if GSAP is not loaded
           sidebar.classList.add('show-sidebar');
         }
       });
+    } else {
+      console.warn('[Sidebar Debug] Could not bind hamburger menu open event listener (navHamburger or sidebar missing)');
     }
 
     if (navHamburgerClose && sidebar) {
+      console.log('[Sidebar Debug] Binding click listener to navHamburgerClose');
       navHamburgerClose.addEventListener('click', () => {
+        console.log('[Sidebar Debug] navHamburgerClose clicked!');
         document.body.classList.remove('overflow-hidden');
         if (this.tl) {
+          console.log('[Sidebar Debug] Reversing GSAP Timeline');
           this.tl.reverse();
         } else {
+          console.log('[Sidebar Debug] Timeline missing, hiding via class');
           // Fallback to CSS classes if GSAP is not loaded
           sidebar.classList.remove('show-sidebar');
         }
       });
+    } else {
+      console.warn('[Sidebar Debug] Could not bind hamburger menu close event listener (navHamburgerClose or sidebar missing)');
     }
   },
 };
