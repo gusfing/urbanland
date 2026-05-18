@@ -1,5 +1,32 @@
 /* =========== GLOBAL STYLES ========== */
 
+/* Custom Scrollbar for Urbanland Premium Brand */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0d0d0d;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E8611A;
+  border-radius: 9999px;
+  border: 2px solid #0d0d0d; /* spacing around thumb for a modern floating look */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ff7aa3; /* subtle light orange/coral glow on hover */
+  background: #ff7733;
+}
+
+/* Firefox Support */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #E8611A #0d0d0d;
+}
+
 body {
   @apply font-inter antialiased;
 }
