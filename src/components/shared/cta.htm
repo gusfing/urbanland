@@ -1,52 +1,96 @@
 <!-- cta section  -->
-<section class="py-[80px] lg:py-[112px]" aria-labelledby="cta-heading">
-  <div class="main-container overflow-hidden">
+<section class="py-[80px] lg:py-[112px] bg-transparent" aria-labelledby="cta-heading">
+  <div class="main-container">
     <div
       data-opai-animate
       data-delay="0.1"
-      class="flex flex-col items-center justify-between gap-x-[22px] rounded-3xl bg-white px-8 pt-20 md:px-0 md:pl-[80px] lg:h-[496px] lg:flex-row lg:pt-0 xl:pl-[112px]"
+      class="relative overflow-hidden rounded-[32px] bg-[#010101] shadow-2xl min-h-[520px] flex items-center"
     >
-      <!-- content -->
-      <div class="space-y-12 text-center lg:text-left">
-        <div class="space-y-3">
+      <!-- Background Image -->
+      <img
+        src="./images/projects/project-1.png"
+        alt="Urbanland Products premium wooden bench and concrete planter installation"
+        class="absolute inset-0 size-full object-cover object-center opacity-45 pointer-events-none scale-100 group-hover:scale-105 transition-transform duration-700"
+      />
+      <!-- Dark gradient overlay for extreme readability -->
+      <div class="absolute inset-0 bg-gradient-to-r from-black via-black/90 to-black/30 lg:to-transparent z-10"></div>
+
+      <!-- Content -->
+      <div class="relative z-20 w-full px-6 py-16 md:px-16 lg:py-24 xl:px-24 flex flex-col justify-center text-left space-y-8 max-w-3xl">
+        <div class="space-y-4">
+          <!-- Small tag for SEO context -->
+          <span class="inline-block font-ibm-plex-mono text-[10px] md:text-xs font-semibold tracking-[0.25em] text-[#E8611A] uppercase">
+            Guaranteed Outdoor Furniture Manufacturer India
+          </span>
           <h2
-            data-text-reveal
-            class="font-sora lg:text-sora-heading-2 text-sora-heading-3 text-background-13/90 w-full max-w-[567px] font-normal"
+            id="cta-heading"
+            class="font-sora text-[clamp(2rem,4.5vw,3.25rem)] font-normal leading-[1.1] tracking-tight text-white"
           >
-            Elevate your business with intelligent solutions
+            Ready to Specify <br class="hidden sm:inline" />
+            <span class="italic font-semibold text-[#E8611A]">Outdoor Furniture</span> for Your Next Project?
           </h2>
           <p
-            data-text-reveal
-            data-delay="0.2"
-            class="font-inter-tight text-tagline-2 text-background-13/50 mx-auto max-w-[400px] font-normal lg:mx-0"
+            class="font-inter-tight text-sm md:text-base leading-relaxed text-white/80 max-w-[620px]"
           >
-            Connect with us to explore how Urbanland can transform your public spaces.
+            Get your custom project quote and full product catalogue in under 60 seconds. <strong class="text-white font-semibold">Urbanland Products</strong> — India's guaranteed <span class="underline decoration-[#E8611A] decoration-2 underline-offset-4">outdoor furniture manufacturer</span> for real estate, hospitality & smart cities.
           </p>
         </div>
 
-        <div data-opai-animate data-delay="0.3">
-          <Component
-            src="src/components/shared/button/link-primary.htm"
-            button-text="Learn more"
-            href="./services.html"
-          />
-        </div>
-      </div>
+        <!-- Buttons Container -->
+        <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2">
+          <!-- CTA BUTTON 1 (PRIMARY — ORANGE) -->
+          <a
+            href="./contact.html"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-300 outline-offset-2 hover:scale-[1.02] active:scale-[0.98] h-12 px-6 bg-[#E8611A] text-white shadow-md hover:bg-[#E8611A]/95 relative pe-14 shrink-0 font-sora"
+            aria-label="Get Project Quote Now"
+          >
+            Get Project Quote Now
+            <span class="pointer-events-none absolute inset-y-0 end-0 flex w-12 items-center justify-center bg-white/15 border-l border-white/10 rounded-r-lg">
+              <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
 
-      <div
-        data-opai-animate
-        data-delay="0.4"
-        class="mt-10 -mr-8 ml-auto w-full max-w-[550px] overflow-hidden rounded-b-2xl md:mr-0 lg:mr-auto xl:mt-0 xl:max-w-[589px]"
-      >
-        <img
-          src="./images/hero/Bench_Planter.jpeg"
-          alt="Urbanland Products premium wooden bench and concrete planter installation"
-          class="size-full object-cover rounded-tr-3xl"
-          itemprop="image"
-        />
+          <!-- CTA BUTTON 2 (SECONDARY — OUTLINED) -->
+          <a
+            href="./contact.html#download-catalogue"
+            class="inline-flex items-center justify-center whitespace-nowrap rounded-lg text-sm font-medium transition-all duration-300 outline-offset-2 hover:scale-[1.02] active:scale-[0.98] h-12 px-6 border border-white/30 bg-transparent text-white shadow-sm hover:bg-white/10 hover:border-white/50 relative pe-14 shrink-0 font-sora"
+            aria-label="Download Full Catalogue 2026"
+          >
+            Download Full Catalogue 2026
+            <span class="pointer-events-none absolute inset-y-0 end-0 flex w-12 items-center justify-center bg-white/10 border-l border-white/15 rounded-r-lg">
+              <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M12 5v14M5 12l7 7 7-7" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </span>
+          </a>
+        </div>
+
+        <!-- Supporting Line -->
+        <div class="flex flex-wrap items-center gap-x-4 gap-y-2 border-t border-white/10 pt-6 text-[11px] md:text-xs text-white/50 font-inter">
+          <div class="flex items-center gap-1.5">
+            <svg class="size-3.5 text-[#E8611A] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Free quote. No commitment.</span>
+          </div>
+          <span class="hidden sm:inline size-1 rounded-full bg-white/20"></span>
+          <div class="flex items-center gap-1.5">
+            <svg class="size-3.5 text-[#E8611A] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>Nationwide delivery.</span>
+          </div>
+          <span class="hidden sm:inline size-1 rounded-full bg-white/20"></span>
+          <div class="flex items-center gap-1.5">
+            <svg class="size-3.5 text-[#E8611A] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <path d="M20 6 9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <span>2-Year Guarantee on every product.</span>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
-
-

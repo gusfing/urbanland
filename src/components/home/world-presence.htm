@@ -12,7 +12,7 @@
           data-text-reveal
           class="font-sora text-[clamp(2.5rem,5.5vw,4rem)] font-normal leading-[1.08] tracking-tight text-[#010101]"
         >
-          Urbanland <br class="hidden xl:inline" /><span class="italic text-[#14743A] font-semibold">in the world</span>
+          Urbanland <br class="hidden xl:inline" /><span class="italic text-[#E8611A] font-semibold">in the world</span>
         </h2>
 
         <!-- Body text -->
@@ -27,7 +27,7 @@
         <!-- Stats Grid -->
         <div data-opai-animate data-delay="0.3" class="grid grid-cols-3 gap-4 border-t border-[#010101]/10 pt-8 mt-6">
           <div class="space-y-1">
-            <div class="font-sora text-2xl md:text-3xl font-semibold text-[#14743A]">50+</div>
+            <div class="font-sora text-2xl md:text-3xl font-semibold text-[#E8611A]">50+</div>
             <div class="font-inter text-[10px] uppercase tracking-wider text-[#010101]/50 leading-tight">Landmark Projects</div>
           </div>
           <div class="space-y-1">
@@ -35,7 +35,7 @@
             <div class="font-inter text-[10px] uppercase tracking-wider text-[#010101]/50 leading-tight">Cities Served</div>
           </div>
           <div class="space-y-1">
-            <div class="font-sora text-2xl md:text-3xl font-semibold text-[#14743A]">2Y</div>
+            <div class="font-sora text-2xl md:text-3xl font-semibold text-[#E8611A]">2Y</div>
             <div class="font-inter text-[10px] uppercase tracking-wider text-[#010101]/50 leading-tight">Guarantee Period</div>
           </div>
         </div>
@@ -46,7 +46,7 @@
         <div data-opai-animate data-delay="0.4" class="hidden lg:flex items-center gap-3">
           <button
             id="proj-prev"
-            class="flex size-12 items-center justify-center rounded-full border border-[#010101]/15 bg-white text-[#010101] shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#14743A] hover:text-white hover:border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#14743A]"
+            class="flex size-12 items-center justify-center rounded-full border border-[#010101]/15 bg-white text-[#010101] shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#E8611A] hover:text-white hover:border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8611A]"
             aria-label="Previous project"
           >
             <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -55,7 +55,7 @@
           </button>
           <button
             id="proj-next"
-            class="flex size-12 items-center justify-center rounded-full border border-[#010101]/15 bg-white text-[#010101] shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#14743A] hover:text-white hover:border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#14743A]"
+            class="flex size-12 items-center justify-center rounded-full border border-[#010101]/15 bg-white text-[#010101] shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#E8611A] hover:text-white hover:border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8611A]"
             aria-label="Next project"
           >
             <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -66,13 +66,15 @@
 
         <a
           href="./case-studies.html"
-          class="group inline-flex items-center gap-4 bg-[#010101] px-8 py-4 text-white transition-all duration-300 hover:bg-[#14743A] w-fit"
-          style="border-radius: 9px;"
+          class="btn-shadcn w-fit"
+          aria-label="Our projects"
         >
-          <span class="font-sora text-base font-medium">Our projects</span>
-          <svg class="size-4 transition-transform group-hover:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M5 12h14m-7-7 7 7-7 7"/>
-          </svg>
+          Our projects
+          <span class="btn-shadcn-icon">
+            <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </span>
         </a>
       </div>
     </div>
@@ -85,105 +87,76 @@
         style="scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; cursor: grab;"
       >
 
-        <!-- Project 1 -->
+        <!-- Project 1: Lodha Group -->
         <div
           class="relative min-w-[285px] md:min-w-[380px] xl:min-w-[440px] overflow-hidden group shrink-0 transition-all duration-500 rounded-[16px] aspect-[3/4] scroll-snap-align: start group-hover/track:opacity-40 group-hover/track:blur-[2px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-20 hover:shadow-[0_30px_60px_rgba(0,0,0,0.25)]"
         >
-          <img src="./images/projects/project-1.png" alt="Vltava Areal" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <img src="./images/projects/project-1.png" alt="Lodha Group" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <!-- gradient overlay -->
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40"></div>
-          
-          <!-- Pulse Hotspot + Geo Tag -->
-          <div class="absolute top-6 left-6 flex items-center gap-2 rounded-full border border-white/15 bg-black/35 px-3 py-1.5 backdrop-blur-md transition-transform duration-500 group-hover:translate-y-[-2px]">
-            <span class="relative flex size-2 shrink-0">
-              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#14743A] opacity-75"></span>
-              <span class="relative inline-flex size-2 rounded-full bg-[#14743A]"></span>
-            </span>
-            <span class="font-ibm-plex-mono text-[9px] font-medium tracking-wider text-white/90">48.97° N, 14.47° E</span>
-          </div>
 
           <!-- Bottom Content (Title & Spec reveals) -->
           <div class="absolute bottom-8 left-8 right-8 flex flex-col gap-3 text-white">
-            <h3 class="font-sora text-2xl md:text-3xl font-semibold leading-tight tracking-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-500">Vltava Areal</h3>
+            <h3 class="font-sora text-2xl md:text-3xl font-semibold leading-tight tracking-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-500">Lodha Townships</h3>
+            <p class="font-inter text-xs text-white/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">420+ WPC & SS benches + GFRC planters supplied across premium township developments.</p>
             <div class="flex items-center gap-2.5 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-75">
-              <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#14743A] bg-white/95 px-2.5 py-1 rounded-[4px]">RIVAGE</span>
+              <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#E8611A] bg-white/95 px-2.5 py-1 rounded-[4px]">BENCHES & PLANTERS</span>
               <span class="size-1 rounded-full bg-white/40"></span>
-              <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">České Budějovice</span>
+              <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">Mumbai</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 2 -->
+        <!-- Project 2: Adani Realty -->
         <div
           class="relative min-w-[285px] md:min-w-[380px] xl:min-w-[440px] overflow-hidden group shrink-0 transition-all duration-500 rounded-[16px] aspect-[3/4] scroll-snap-align: start group-hover/track:opacity-40 group-hover/track:blur-[2px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-20 hover:shadow-[0_30px_60px_rgba(0,0,0,0.25)]"
         >
-          <img src="./images/projects/banner-1.png" alt="Urban Park Life" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <img src="./images/projects/banner-1.png" alt="Adani Realty" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40"></div>
-          
-          <div class="absolute top-6 left-6 flex items-center gap-2 rounded-full border border-white/15 bg-black/35 px-3 py-1.5 backdrop-blur-md transition-transform duration-500 group-hover:translate-y-[-2px]">
-            <span class="relative flex size-2 shrink-0">
-              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#8C3721] opacity-75"></span>
-              <span class="relative inline-flex size-2 rounded-full bg-[#8C3721]"></span>
-            </span>
-            <span class="font-ibm-plex-mono text-[9px] font-medium tracking-wider text-white/90">40.78° N, 73.96° W</span>
-          </div>
 
           <div class="absolute bottom-8 left-8 right-8 flex flex-col gap-3 text-white">
-            <h3 class="font-sora text-2xl md:text-3xl font-semibold leading-tight tracking-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-500">Urban Park Life</h3>
+            <h3 class="font-sora text-2xl md:text-3xl font-semibold leading-tight tracking-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-500">Adani Residential</h3>
+            <p class="font-inter text-xs text-white/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">Complete outdoor furniture solutions including benches, dustbins, planters, and car sheds.</p>
             <div class="flex items-center gap-2.5 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-75">
-              <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C3721] bg-white/95 px-2.5 py-1 rounded-[4px]">BENCH</span>
+              <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C3721] bg-white/95 px-2.5 py-1 rounded-[4px]">CAR SHEDS & BENCHES</span>
               <span class="size-1 rounded-full bg-white/40"></span>
-              <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">Central Park</span>
+              <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">Ahmedabad</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 3 -->
+        <!-- Project 3: Oberoi Realty -->
         <div
           class="relative min-w-[285px] md:min-w-[380px] xl:min-w-[440px] overflow-hidden group shrink-0 transition-all duration-500 rounded-[16px] aspect-[3/4] scroll-snap-align: start group-hover/track:opacity-40 group-hover/track:blur-[2px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-20 hover:shadow-[0_30px_60px_rgba(0,0,0,0.25)]"
         >
-          <img src="./images/projects/project-2.png" alt="Chotýčany" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <img src="./images/projects/project-2.png" alt="Oberoi Realty" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40"></div>
-          
-          <div class="absolute top-6 left-6 flex items-center gap-2 rounded-full border border-white/15 bg-black/35 px-3 py-1.5 backdrop-blur-md transition-transform duration-500 group-hover:translate-y-[-2px]">
-            <span class="relative flex size-2 shrink-0">
-              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#14743A] opacity-75"></span>
-              <span class="relative inline-flex size-2 rounded-full bg-[#14743A]"></span>
-            </span>
-            <span class="font-ibm-plex-mono text-[9px] font-medium tracking-wider text-white/90">49.07° N, 14.51° E</span>
-          </div>
 
           <div class="absolute bottom-8 left-8 right-8 flex flex-col gap-3 text-white">
-            <h3 class="font-sora text-2xl md:text-3xl font-semibold leading-tight tracking-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-500">Chotýčany</h3>
+            <h3 class="font-sora text-2xl md:text-3xl font-semibold leading-tight tracking-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-500">Oberoi Luxury</h3>
+            <p class="font-inter text-xs text-white/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">Premium wicker furniture, poolside loungers, and cabanas crafted for luxury spaces.</p>
             <div class="flex items-center gap-2.5 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-75">
-              <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#14743A] bg-white/95 px-2.5 py-1 rounded-[4px]">CUBY</span>
+              <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#E8611A] bg-white/95 px-2.5 py-1 rounded-[4px]">WICKER FURNITURE</span>
               <span class="size-1 rounded-full bg-white/40"></span>
-              <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">České Budějovice</span>
+              <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">Thane</span>
             </div>
           </div>
         </div>
 
-        <!-- Project 4 -->
+        <!-- Project 4: Smart Cities -->
         <div
           class="relative min-w-[285px] md:min-w-[380px] xl:min-w-[440px] overflow-hidden group shrink-0 transition-all duration-500 rounded-[16px] aspect-[3/4] scroll-snap-align: start group-hover/track:opacity-40 group-hover/track:blur-[2px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-20 hover:shadow-[0_30px_60px_rgba(0,0,0,0.25)]"
         >
-          <img src="./images/projects/banner-2.png" alt="City Plaza" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <img src="./images/projects/banner-2.png" alt="Smart Cities" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
           <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40"></div>
-          
-          <div class="absolute top-6 left-6 flex items-center gap-2 rounded-full border border-white/15 bg-black/35 px-3 py-1.5 backdrop-blur-md transition-transform duration-500 group-hover:translate-y-[-2px]">
-            <span class="relative flex size-2 shrink-0">
-              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-[#8C3721] opacity-75"></span>
-              <span class="relative inline-flex size-2 rounded-full bg-[#8C3721]"></span>
-            </span>
-            <span class="font-ibm-plex-mono text-[9px] font-medium tracking-wider text-white/90">18.92° N, 72.83° E</span>
-          </div>
 
           <div class="absolute bottom-8 left-8 right-8 flex flex-col gap-3 text-white">
-            <h3 class="font-sora text-2xl md:text-3xl font-semibold leading-tight tracking-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-500">City Plaza</h3>
+            <h3 class="font-sora text-2xl md:text-3xl font-semibold leading-tight tracking-tight translate-y-2 group-hover:translate-y-0 transition-transform duration-500">Smart City Mission</h3>
+            <p class="font-inter text-xs text-white/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">MS/SS bus shelters, park benches, bollards, and outdoor dustbins delivered for urban infra.</p>
             <div class="flex items-center gap-2.5 opacity-0 group-hover:opacity-100 translate-y-4 group-hover:translate-y-0 transition-all duration-500 delay-75">
-              <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C3721] bg-white/95 px-2.5 py-1 rounded-[4px]">SHELTER</span>
+              <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#8C3721] bg-white/95 px-2.5 py-1 rounded-[4px]">BUS SHELTERS</span>
               <span class="size-1 rounded-full bg-white/40"></span>
-              <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">Downtown Square</span>
+              <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">New Delhi</span>
             </div>
           </div>
         </div>
@@ -196,7 +169,7 @@
   <!-- Custom Floating Cursor Follower -->
   <div
     id="custom-cursor"
-    class="pointer-events-none fixed z-[9999] hidden lg:flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#14743A]/90 text-white opacity-0 scale-0 shadow-lg backdrop-blur-sm transition-all duration-300 ease-out pointer-events-none"
+    class="pointer-events-none fixed z-[9999] hidden lg:flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#E8611A]/90 text-white opacity-0 scale-0 shadow-lg backdrop-blur-sm transition-all duration-300 ease-out pointer-events-none"
   >
     <span class="font-sora text-[9px] font-bold uppercase tracking-widest">Drag</span>
   </div>
@@ -281,7 +254,7 @@
       track.classList.remove('dragging');
       if (cursor) {
         cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-        cursor.style.backgroundColor = 'rgba(20, 116, 58, 0.9)';
+        cursor.style.backgroundColor = 'rgba(232, 97, 26, 0.9)';
         cursor.firstElementChild.innerText = 'Drag';
       }
     });
