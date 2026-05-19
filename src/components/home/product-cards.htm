@@ -1,10 +1,10 @@
 <!-- Most Requested Products Section -->
 <section class="w-full overflow-hidden bg-transparent py-20 md:py-28 relative" aria-labelledby="products-heading">
-  <div class="max-w-[1440px] mx-auto px-6 md:px-16 mb-12">
+  <div class="max-w-[1440px] mx-auto px-6 md:px-16 mb-16">
     <!-- Header Grid -->
     <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
       <div class="space-y-4 max-w-2xl">
-        <span class="inline-block font-ibm-plex-mono text-xs font-semibold tracking-[0.2em] text-[#E8611A] uppercase">
+        <span class="inline-block font-ibm-plex-mono text-xs font-semibold tracking-[0.2em] text-[#8b3721] uppercase">
           Most Requested Products
         </span>
         <h2
@@ -12,70 +12,46 @@
           class="font-sora text-[clamp(2.25rem,4.5vw,3.25rem)] font-normal leading-[1.1] tracking-tight text-[#010101]"
         >
           Outdoor & Urban Furniture <br class="hidden sm:inline" />
-          <span class="italic text-[#E8611A] font-semibold">for Large-Scale Projects</span>
+          <span class="italic text-[#8b3721] font-semibold">for Large-Scale Projects</span>
         </h2>
       </div>
-      <div class="flex flex-col sm:flex-row sm:items-center gap-6 lg:mb-2 max-w-md">
+      <div class="max-w-md">
         <p class="font-inter-tight text-sm md:text-base text-[#010101]/65 leading-relaxed">
           Specified by India's leading real estate developers, hotels, and smart cities. Heavy-duty construction backed by our 2-year guarantee.
         </p>
-        
-        <!-- Next/Prev Buttons (Desktop and Tablet) -->
-        <div class="hidden sm:flex items-center gap-3 shrink-0">
-          <button
-            id="prod-prev"
-            class="flex size-12 items-center justify-center rounded-full border border-[#010101]/15 bg-white text-[#010101] shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#E8611A] hover:text-white hover:border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8611A]"
-            aria-label="Previous products"
-          >
-            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M19 12H5M12 19l-7-7 7-7"/>
-            </svg>
-          </button>
-          <button
-            id="prod-next"
-            class="flex size-12 items-center justify-center rounded-full border border-[#010101]/15 bg-white text-[#010101] shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#E8611A] hover:text-white hover:border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#E8611A]"
-            aria-label="Next products"
-          >
-            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14m-7-7 7 7-7 7"/>
-            </svg>
-          </button>
-        </div>
       </div>
     </div>
   </div>
 
-  <div class="relative">
-    <!-- Scrollable track -->
+  <!-- Symmetrical Responsive Products Grid -->
+  <div class="max-w-[1440px] mx-auto px-6 md:px-16">
     <div
-      id="prod-track"
-      class="group/track flex gap-6 overflow-x-auto scroll-smooth px-6 md:px-16 pb-12"
-      style="scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; cursor: grab;"
+      class="group/track grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 pb-12"
       role="list"
-      aria-label="Most requested products list"
+      aria-label="Most requested products grid"
     >
 
       <!-- ── CARD 1 — Bus Shelters ── -->
       <article
-        class="relative flex h-[350px] w-[260px] sm:h-[450px] sm:w-[340px] md:h-[580px] md:w-[440px] shrink-0 flex-col justify-between overflow-hidden bg-white group rounded-[16px] scroll-snap-align: start group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.02] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
+        class="relative flex h-[420px] sm:h-[480px] lg:h-[520px] w-full flex-col justify-between overflow-hidden bg-white group rounded-[16px] group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
         role="listitem" tabindex="0" aria-label="Bus Shelters"
       >
         <!-- Primary Image -->
-        <img src="./images/products-new/Bus_Shelters.png" alt="Bus shelters manufacturer India — Urbanland Products" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
+        <img src="./images/products-new/Bus_Shelters.png" alt="Bus shelters manufacturer India — Urbanland Products" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
         <!-- Hover Image -->
-        <img src="./images/products-new/Bus Shelters/Create_a_clean,_premium,_professional_202605170115.jpeg" alt="Bus shelters alternate" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
+        <img src="./images/products-new/Bus Shelters/Create_a_clean,_premium,_professional_202605170115.jpeg" alt="Bus shelters alternate" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
         
         <div class="relative z-10 flex items-start justify-between gap-3 p-6">
           <h3 class="text-left text-xs md:text-sm font-normal leading-relaxed text-[#010101]/60 max-w-[70%]">Robust infrastructure solutions</h3>
           <div class="flex shrink-0 gap-1.5">
-            <span class="inline-flex items-center rounded-full bg-[#E8611A] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Popular</span>
+            <span class="inline-flex items-center rounded-full bg-[#8b3721] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Popular</span>
           </div>
         </div>
 
         <div class="relative z-10 p-6 text-left space-y-2 bg-gradient-to-t from-white via-white/80 to-transparent pt-12">
           <p class="font-sora text-lg md:text-xl font-semibold tracking-tight text-[#010101]">Bus Shelters</p>
           <p class="font-inter text-xs text-[#010101]/60 line-clamp-2 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">Robust MS/SS bus shelters for townships, campuses & smart cities.</p>
-          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#E8611A] group/btn pt-1">
+          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#8b3721] group/btn pt-1">
             <span>View & Get Quote</span>
             <svg class="size-3.5 transition-transform group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14m-7-7 7 7-7 7"/>
@@ -86,23 +62,23 @@
 
       <!-- ── CARD 2 — Benches ── -->
       <article
-        class="relative flex h-[350px] w-[260px] sm:h-[450px] sm:w-[340px] md:h-[580px] md:w-[440px] shrink-0 flex-col justify-between overflow-hidden bg-white group rounded-[16px] scroll-snap-align: start group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.02] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
+        class="relative flex h-[420px] sm:h-[480px] lg:h-[520px] w-full flex-col justify-between overflow-hidden bg-white group rounded-[16px] group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
         role="listitem" tabindex="0" aria-label="WPC & Aluminium Benches"
       >
-        <img src="./images/products-new/Benches.png" alt="WPC bench manufacturer India — Urbanland Products" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
-        <img src="./images/products-new/Benches/Create_a_clean,_premium,_professional_202605162312.jpeg" alt="Benches alternate" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
+        <img src="./images/products-new/Benches.png" alt="WPC bench manufacturer India — Urbanland Products" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
+        <img src="./images/products-new/Benches/Create_a_clean,_premium,_professional_202605162312.jpeg" alt="Benches alternate" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
         
         <div class="relative z-10 flex items-start justify-between gap-3 p-6">
           <h3 class="text-left text-xs md:text-sm font-normal leading-relaxed text-[#010101]/60 max-w-[70%]">Weather-resistant park benches</h3>
           <div class="flex shrink-0 gap-1.5">
-            <span class="inline-flex items-center rounded-full bg-[#8C3721] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Best Seller</span>
+            <span class="inline-flex items-center rounded-full bg-[#8b3721] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Best Seller</span>
           </div>
         </div>
 
         <div class="relative z-10 p-6 text-left space-y-2 bg-gradient-to-t from-white via-white/80 to-transparent pt-12">
           <p class="font-sora text-lg md:text-xl font-semibold tracking-tight text-[#010101]">WPC & Aluminium Benches</p>
           <p class="font-inter text-xs text-[#010101]/60 line-clamp-2 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">Weather-resistant WPC and aluminium outdoor benches.</p>
-          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#E8611A] group/btn pt-1">
+          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#8b3721] group/btn pt-1">
             <span>View & Get Quote</span>
             <svg class="size-3.5 transition-transform group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14m-7-7 7 7-7 7"/>
@@ -113,23 +89,23 @@
 
       <!-- ── CARD 3 — Outdoor Dustbins ── -->
       <article
-        class="relative flex h-[350px] w-[260px] sm:h-[450px] sm:w-[340px] md:h-[580px] md:w-[440px] shrink-0 flex-col justify-between overflow-hidden bg-white group rounded-[16px] scroll-snap-align: start group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.02] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
+        class="relative flex h-[420px] sm:h-[480px] lg:h-[520px] w-full flex-col justify-between overflow-hidden bg-white group rounded-[16px] group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
         role="listitem" tabindex="0" aria-label="Outdoor Dustbins"
       >
-        <img src="./images/products-new/Dustbins.png" alt="Outdoor dustbin manufacturer India — Urbanland Products" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
-        <img src="./images/products-new/Dustbins/Create_a_clean,_premium,_professional_202605170106.jpeg" alt="Dustbins alternate" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
+        <img src="./images/products-new/Dustbins.png" alt="Outdoor dustbin manufacturer India — Urbanland Products" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
+        <img src="./images/products-new/Dustbins/Create_a_clean,_premium,_professional_202605170106.jpeg" alt="Dustbins alternate" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
         
         <div class="relative z-10 flex items-start justify-between gap-3 p-6">
           <h3 class="text-left text-xs md:text-sm font-normal leading-relaxed text-[#010101]/60 max-w-[70%]">Durable waste management</h3>
           <div class="flex shrink-0 gap-1.5">
-            <span class="inline-flex items-center rounded-full bg-[#E8611A] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Popular</span>
+            <span class="inline-flex items-center rounded-full bg-[#8b3721] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Popular</span>
           </div>
         </div>
 
         <div class="relative z-10 p-6 text-left space-y-2 bg-gradient-to-t from-white via-white/80 to-transparent pt-12">
           <p class="font-sora text-lg md:text-xl font-semibold tracking-tight text-[#010101]">Outdoor Dustbins</p>
           <p class="font-inter text-xs text-[#010101]/60 line-clamp-2 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">Stainless steel and composite dustbins for smart city zones.</p>
-          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#E8611A] group/btn pt-1">
+          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#8b3721] group/btn pt-1">
             <span>View & Get Quote</span>
             <svg class="size-3.5 transition-transform group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14m-7-7 7 7-7 7"/>
@@ -140,23 +116,23 @@
 
       <!-- ── CARD 4 — Planters ── -->
       <article
-        class="relative flex h-[350px] w-[260px] sm:h-[450px] sm:w-[340px] md:h-[580px] md:w-[440px] shrink-0 flex-col justify-between overflow-hidden bg-white group rounded-[16px] scroll-snap-align: start group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.02] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
+        class="relative flex h-[420px] sm:h-[480px] lg:h-[520px] w-full flex-col justify-between overflow-hidden bg-white group rounded-[16px] group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
         role="listitem" tabindex="0" aria-label="GFRC & Concrete Planters"
       >
-        <img src="./images/products-new/Planters_Box.png" alt="GFRC planter manufacturer — Urbanland Products" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
-        <img src="./images/products-new/Planters Box/Create_a_clean,_premium,_professional_202605170111.jpeg" alt="Planters alternate" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
+        <img src="./images/products-new/Planters_Box.png" alt="GFRC planter manufacturer — Urbanland Products" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
+        <img src="./images/products-new/Planters Box/Create_a_clean,_premium,_professional_202605170111.jpeg" alt="Planters alternate" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
         
         <div class="relative z-10 flex items-start justify-between gap-3 p-6">
           <h3 class="text-left text-xs md:text-sm font-normal leading-relaxed text-[#010101]/60 max-w-[70%]">Lightweight landscape elements</h3>
           <div class="flex shrink-0 gap-1.5">
-            <span class="inline-flex items-center rounded-full bg-[#E8611A] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Popular</span>
+            <span class="inline-flex items-center rounded-full bg-[#8b3721] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Popular</span>
           </div>
         </div>
 
         <div class="relative z-10 p-6 text-left space-y-2 bg-gradient-to-t from-white via-white/80 to-transparent pt-12">
           <p class="font-sora text-lg md:text-xl font-semibold tracking-tight text-[#010101]">GFRC & Concrete Planters</p>
           <p class="font-inter text-xs text-[#010101]/60 line-clamp-2 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">Lightweight GFRC planters for premium commercial developments.</p>
-          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#E8611A] group/btn pt-1">
+          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#8b3721] group/btn pt-1">
             <span>View & Get Quote</span>
             <svg class="size-3.5 transition-transform group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14m-7-7 7 7-7 7"/>
@@ -167,23 +143,23 @@
 
       <!-- ── CARD 5 — Canteen Tables ── -->
       <article
-        class="relative flex h-[350px] w-[260px] sm:h-[450px] sm:w-[340px] md:h-[580px] md:w-[440px] shrink-0 flex-col justify-between overflow-hidden bg-white group rounded-[16px] scroll-snap-align: start group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.02] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
+        class="relative flex h-[420px] sm:h-[480px] lg:h-[520px] w-full flex-col justify-between overflow-hidden bg-white group rounded-[16px] group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
         role="listitem" tabindex="0" aria-label="Canteen Tables & Benches"
       >
-        <img src="./images/products-new/Canteen_Table.png" alt="Canteen table manufacturer India — Urbanland Products" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
-        <img src="./images/products-new/Canteen Table/Create_a_clean,_premium,_professional_202605170053.jpeg" alt="Canteen Table alternate" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
+        <img src="./images/products-new/Canteen_Table.png" alt="Canteen table manufacturer India — Urbanland Products" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
+        <img src="./images/products-new/Canteen Table/Create_a_clean,_premium,_professional_202605170053.jpeg" alt="Canteen Table alternate" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
         
         <div class="relative z-10 flex items-start justify-between gap-3 p-6">
           <h3 class="text-left text-xs md:text-sm font-normal leading-relaxed text-[#010101]/60 max-w-[70%]">Heavy-duty communal dining</h3>
           <div class="flex shrink-0 gap-1.5">
-            <span class="inline-flex items-center rounded-full bg-[#E8611A] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Popular</span>
+            <span class="inline-flex items-center rounded-full bg-[#8b3721] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Popular</span>
           </div>
         </div>
 
         <div class="relative z-10 p-6 text-left space-y-2 bg-gradient-to-t from-white via-white/80 to-transparent pt-12">
           <p class="font-sora text-lg md:text-xl font-semibold tracking-tight text-[#010101]">Canteen Tables & Benches</p>
           <p class="font-inter text-xs text-[#010101]/60 line-clamp-2 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">Heavy-duty dining sets for corporate and campus spaces.</p>
-          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#E8611A] group/btn pt-1">
+          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#8b3721] group/btn pt-1">
             <span>View & Get Quote</span>
             <svg class="size-3.5 transition-transform group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14m-7-7 7 7-7 7"/>
@@ -194,23 +170,23 @@
 
       <!-- ── CARD 6 — Car Parking Sheds ── -->
       <article
-        class="relative flex h-[350px] w-[260px] sm:h-[450px] sm:w-[340px] md:h-[580px] md:w-[440px] shrink-0 flex-col justify-between overflow-hidden bg-white group rounded-[16px] scroll-snap-align: start group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.02] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
+        class="relative flex h-[420px] sm:h-[480px] lg:h-[520px] w-full flex-col justify-between overflow-hidden bg-white group rounded-[16px] group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
         role="listitem" tabindex="0" aria-label="Car Parking Sheds"
       >
-        <img src="./images/products-new/Car_Shelter.png" alt="Car parking shed manufacturer — Urbanland Products" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
-        <img src="./images/products-new/Car Shelter/Create_a_clean,_premium,_professional_202605170216.jpeg" alt="Car Shelter alternate" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
+        <img src="./images/products-new/Car_Shelter.png" alt="Car parking shed manufacturer — Urbanland Products" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
+        <img src="./images/products-new/Car Shelter/Create_a_clean,_premium,_professional_202605170216.jpeg" alt="Car Shelter alternate" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
         
         <div class="relative z-10 flex items-start justify-between gap-3 p-6">
           <h3 class="text-left text-xs md:text-sm font-normal leading-relaxed text-[#010101]/60 max-w-[70%]">Modular vehicle protection</h3>
           <div class="flex shrink-0 gap-1.5">
-            <span class="inline-flex items-center rounded-full bg-[#8C3721] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Featured</span>
+            <span class="inline-flex items-center rounded-full bg-[#8b3721] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Featured</span>
           </div>
         </div>
 
         <div class="relative z-10 p-6 text-left space-y-2 bg-gradient-to-t from-white via-white/80 to-transparent pt-12">
           <p class="font-sora text-lg md:text-xl font-semibold tracking-tight text-[#010101]">Car Parking Sheds</p>
           <p class="font-inter text-xs text-[#010101]/60 line-clamp-2 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">Powder-coated, modular car sheds for residential projects.</p>
-          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#E8611A] group/btn pt-1">
+          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#8b3721] group/btn pt-1">
             <span>View & Get Quote</span>
             <svg class="size-3.5 transition-transform group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14m-7-7 7 7-7 7"/>
@@ -221,23 +197,23 @@
 
       <!-- ── CARD 7 — Poolside Loungers & Cabanas ── -->
       <article
-        class="relative flex h-[350px] w-[260px] sm:h-[450px] sm:w-[340px] md:h-[580px] md:w-[440px] shrink-0 flex-col justify-between overflow-hidden bg-white group rounded-[16px] scroll-snap-align: start group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.02] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
+        class="relative flex h-[420px] sm:h-[480px] lg:h-[520px] w-full flex-col justify-between overflow-hidden bg-white group rounded-[16px] group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
         role="listitem" tabindex="0" aria-label="Poolside Loungers & Cabanas"
       >
-        <img src="./images/products-new/Poolside_Loungers.png" alt="Poolside lounger manufacturer — Urbanland Products" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
-        <img src="./images/products-new/Poolside Loungers/Create_a_clean,_premium,_professional_202605170154.jpeg" alt="Poolside alternate" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
+        <img src="./images/products-new/Poolside_Loungers.png" alt="Poolside lounger manufacturer — Urbanland Products" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
+        <img src="./images/products-new/Poolside Loungers/Create_a_clean,_premium,_professional_202605170154.jpeg" alt="Poolside alternate" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
         
         <div class="relative z-10 flex items-start justify-between gap-3 p-6">
           <h3 class="text-left text-xs md:text-sm font-normal leading-relaxed text-[#010101]/60 max-w-[70%]">Premium resort lounging</h3>
           <div class="flex shrink-0 gap-1.5">
-            <span class="inline-flex items-center rounded-full bg-[#E8611A] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Popular</span>
+            <span class="inline-flex items-center rounded-full bg-[#8b3721] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Popular</span>
           </div>
         </div>
 
         <div class="relative z-10 p-6 text-left space-y-2 bg-gradient-to-t from-white via-white/80 to-transparent pt-12">
           <p class="font-sora text-lg md:text-xl font-semibold tracking-tight text-[#010101]">Poolside Loungers</p>
           <p class="font-inter text-xs text-[#010101]/60 line-clamp-2 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">Premium loungers and cabanas for resort and hotel decks.</p>
-          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#E8611A] group/btn pt-1">
+          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#8b3721] group/btn pt-1">
             <span>View & Get Quote</span>
             <svg class="size-3.5 transition-transform group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14m-7-7 7 7-7 7"/>
@@ -248,23 +224,23 @@
 
       <!-- ── CARD 8 — Wicker Furniture ── -->
       <article
-        class="relative flex h-[350px] w-[260px] sm:h-[450px] sm:w-[340px] md:h-[580px] md:w-[440px] shrink-0 flex-col justify-between overflow-hidden bg-white group rounded-[16px] scroll-snap-align: start group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.02] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
+        class="relative flex h-[420px] sm:h-[480px] lg:h-[520px] w-full flex-col justify-between overflow-hidden bg-white group rounded-[16px] group-hover/track:opacity-45 group-hover/track:blur-[1px] hover:!opacity-100 hover:!blur-none hover:!scale-[1.03] hover:z-10 hover:shadow-[0_20px_50px_rgba(0,0,0,0.12)] transition-all duration-500"
         role="listitem" tabindex="0" aria-label="Wicker Furniture"
       >
-        <img src="./images/products-new/Cane_Furniture.png" alt="Wicker furniture manufacturer India — Urbanland Products" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
-        <img src="./images/products-new/Cane Furniture/2 Items.jpeg" alt="Wicker alternate" class="absolute inset-0 m-auto h-[70%] w-[92%] md:h-[84%] md:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
+        <img src="./images/products-new/Cane_Furniture.png" alt="Wicker furniture manufacturer India — Urbanland Products" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-100 scale-100 group-hover:opacity-0 group-hover:scale-95 group-hover:pointer-events-none" />
+        <img src="./images/products-new/Cane Furniture/2 Items.jpeg" alt="Wicker alternate" class="absolute left-0 right-0 top-[16%] bottom-[26%] m-auto h-[58%] w-[92%] lg:top-[12%] lg:bottom-[20%] lg:h-[68%] lg:w-[92%] object-contain transition-all duration-700 opacity-0 scale-105 group-hover:opacity-100 group-hover:scale-105" />
         
         <div class="relative z-10 flex items-start justify-between gap-3 p-6">
           <h3 class="text-left text-xs md:text-sm font-normal leading-relaxed text-[#010101]/60 max-w-[70%]">Hand-woven luxury wicker</h3>
           <div class="flex shrink-0 gap-1.5">
-            <span class="inline-flex items-center rounded-full bg-[#E8611A] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Popular</span>
+            <span class="inline-flex items-center rounded-full bg-[#8b3721] px-2.5 py-0.5 text-[9px] md:text-[10px] font-bold uppercase tracking-wider text-white">Popular</span>
           </div>
         </div>
 
         <div class="relative z-10 p-6 text-left space-y-2 bg-gradient-to-t from-white via-white/80 to-transparent pt-12">
           <p class="font-sora text-lg md:text-xl font-semibold tracking-tight text-[#010101]">Wicker Furniture</p>
           <p class="font-inter text-xs text-[#010101]/60 line-clamp-2 md:opacity-0 group-hover:opacity-100 transition-opacity duration-300">Luxury hand-woven wicker dining sets and lounge chairs.</p>
-          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#E8611A] group/btn pt-1">
+          <a href="./contact.html" class="inline-flex items-center gap-2 font-sora text-[11px] font-bold uppercase tracking-wider text-[#8b3721] group/btn pt-1">
             <span>View & Get Quote</span>
             <svg class="size-3.5 transition-transform group-hover/btn:translate-x-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
               <path d="M5 12h14m-7-7 7 7-7 7"/>
@@ -276,80 +252,3 @@
     </div>
   </div>
 </section>
-
-<style>
-  #prod-track::-webkit-scrollbar { display: none; }
-  #prod-track { user-select: none; }
-  #prod-track.dragging { cursor: grabbing; }
-</style>
-
-<script>
-  (function () {
-    const track   = document.getElementById('prod-track');
-    const btnPrev = document.getElementById('prod-prev');
-    const btnNext = document.getElementById('prod-next');
-    if (!track) return;
-
-    const STEP = 432;
-
-    if (btnNext) {
-      btnNext.addEventListener('click', () => {
-        const max = track.scrollWidth - track.clientWidth;
-        track.scrollLeft >= max - 4
-          ? track.scrollTo({ left: 0, behavior: 'smooth' })
-          : track.scrollBy({ left: STEP, behavior: 'smooth' });
-      });
-    }
-
-    if (btnPrev) {
-      btnPrev.addEventListener('click', () => {
-        track.scrollLeft <= 4
-          ? track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' })
-          : track.scrollBy({ left: -STEP, behavior: 'smooth' });
-      });
-    }
-
-    // drag-to-scroll
-    let isDown = false, startX, scrollLeft;
-    track.addEventListener('mousedown', (e) => {
-      isDown = true;
-      track.classList.add('dragging');
-      startX = e.pageX - track.offsetLeft;
-      scrollLeft = track.scrollLeft;
-    });
-    document.addEventListener('mouseup', () => { isDown = false; track.classList.remove('dragging'); });
-    document.addEventListener('mouseleave', () => { isDown = false; track.classList.remove('dragging'); });
-    track.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      track.scrollLeft = scrollLeft - (e.pageX - track.offsetLeft - startX);
-    });
-
-    // Auto-scroll animation
-    let autoScrollSpeed = 0.45;
-    let autoScrollRAF;
-    let isHovering = false;
-
-    function startAutoScroll() {
-      if (isHovering || isDown) return;
-      track.scrollLeft += autoScrollSpeed;
-      if (track.scrollLeft >= track.scrollWidth - track.clientWidth - 1) {
-        track.scrollLeft = 0;
-      }
-      autoScrollRAF = requestAnimationFrame(startAutoScroll);
-    }
-
-    track.addEventListener('mouseenter', () => {
-      isHovering = true;
-      cancelAnimationFrame(autoScrollRAF);
-    });
-    
-    track.addEventListener('mouseleave', () => {
-      isHovering = false;
-      startAutoScroll();
-    });
-
-    // Initialize auto scroll
-    startAutoScroll();
-  })();
-</script>

@@ -3,27 +3,22 @@
 // ===============================
 let lenis;
 const smoothScrolling = () => {
-  // Check if device is mobile (touch device or small screen)
-  const isMobile =
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ||
-    window.innerWidth <= 768 ||
-    'ontouchstart' in window;
+  // Initialize Lenis with native touch scrolling on mobile and premium smooth scrolling on desktop
+  const isMobileScreen = window.innerWidth <= 768;
 
-  // Only initialize Lenis on non-mobile devices
-  if (!isMobile) {
-    lenis = new Lenis({
-      lerp: 0.08,
-      smoothWheel: true,
-    });
+  lenis = new Lenis({
+    lerp: 0.08,
+    smoothWheel: !isMobileScreen,
+    syncTouch: false, // Absolutely disable touch synchronization to preserve hardware-accelerated native mobile momentum scrolling!
+  });
 
-    lenis.on('scroll', () => ScrollTrigger.update());
+  lenis.on('scroll', () => ScrollTrigger.update());
 
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000);
-    });
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000);
+  });
 
-    gsap.ticker.lagSmoothing(0);
-  }
+  gsap.ticker.lagSmoothing(0);
 };
 
 // ===============================

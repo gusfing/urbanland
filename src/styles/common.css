@@ -1,5 +1,16 @@
 /* =========== GLOBAL STYLES ========== */
 
+/* Lenis Scroll Normalization */
+html.lenis, html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
 /* Custom Scrollbar for Urbanland Premium Brand */
 ::-webkit-scrollbar {
   width: 8px;
@@ -11,20 +22,19 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #E8611A;
+  background: #8b3721;
   border-radius: 9999px;
   border: 2px solid #0d0d0d; /* spacing around thumb for a modern floating look */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #ff7aa3; /* subtle light orange/coral glow on hover */
-  background: #ff7733;
+  background: #a5482e; /* subtle glowing terracotta on hover */
 }
 
 /* Firefox Support */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #E8611A #0d0d0d;
+  scrollbar-color: #8b3721 #0d0d0d;
 }
 
 body {

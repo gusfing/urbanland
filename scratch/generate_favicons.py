@@ -27,7 +27,7 @@ def draw_favicon(size):
         y = (1-t)**3 * p0[1] + 3*(1-t)**2 * t * p1[1] + 3*(1-t) * t**2 * p2[1] + t**3 * p3[1]
         points.append((x, y))
         
-    orange_color = (232, 97, 26, 255) # #E8611A
+    orange_color = (139, 55, 33, 255) # #8b3721
     draw.line(points, fill=orange_color, width=max(1, int(round(12 * scale))), joint="round")
     
     # Draw horizontal slat
