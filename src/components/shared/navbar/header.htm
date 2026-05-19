@@ -2,24 +2,24 @@
 Header
 ===========================-->
 <header id="site-header" class="fixed top-4 left-1/2 z-[999] w-[calc(100%-2rem)] max-w-[1440px] -translate-x-1/2 transition-all duration-300">
-  <div id="header-container" class="flex items-center justify-between rounded-[9px] border border-transparent bg-transparent px-6 py-3 transition-all duration-300">
+  <div id="header-container" class="flex items-center justify-between rounded-[9px] border border-[#1A1A1A]/10 bg-white/95 px-6 py-3 shadow-md backdrop-blur-xl transition-all duration-300">
     
     <!-- Left: Logo -->
     <div class="flex-1 flex justify-start">
       <a href="./index.html" class="flex items-center">
         <span class="sr-only">Urbanland</span>
-        <img id="header-logo" src="./images/shared/urbanland-logo.png" alt="Urbanland" class="h-10 sm:h-12 w-auto transition-all duration-300 hover:scale-[1.02] brightness-0 invert drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]" />
+        <img id="header-logo" src="./images/shared/urbanland-logo.png" alt="Urbanland" class="h-10 sm:h-12 w-auto transition-all duration-300 hover:scale-[1.02]" />
       </a>
     </div>
 
     <!-- Center: Brand Icon -->
     <div class="flex-1 flex justify-center">
-      <img id="center-brand-icon" src="./images/shared/center-icon.png" alt="Urbanland Icon" class="h-9 sm:h-10 w-auto transition-all duration-300 hover:scale-[1.05] brightness-0 invert drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]" />
+      <img id="center-brand-icon" src="./images/shared/center-icon.png" alt="Urbanland Icon" class="h-6 sm:h-8 w-auto transition-all duration-300 hover:scale-[1.05]" />
     </div>
 
     <!-- Right: Menu Button -->
     <div class="flex-1 flex justify-end">
-      <button class="nav-hamburger flex items-center gap-1.5 cursor-pointer font-inter text-[11px] font-semibold uppercase tracking-[0.25em] text-white transition-all duration-300 hover:opacity-75 drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]" id="hamburger-btn" aria-label="Menu">
+      <button class="nav-hamburger flex items-center gap-1.5 cursor-pointer font-inter text-[11px] font-semibold uppercase tracking-[0.25em] text-[#1A1A1A] transition-all duration-300 hover:opacity-75" id="hamburger-btn" aria-label="Menu">
         <span class="text-sm font-light leading-none" id="hamburger-plus">+</span>
         <span class="leading-none">Menu</span>
       </button>
@@ -29,49 +29,3 @@ Header
 </header>
 <Component src="src/components/shared/mobile-menu.htm" />
 
-<script>
-  (function() {
-    const container = document.getElementById('header-container');
-    const logo = document.getElementById('header-logo');
-    const centerIcon = document.getElementById('center-brand-icon');
-    const hamburgerBtn = document.getElementById('hamburger-btn');
-    
-    function updateHeaderState() {
-      if (window.scrollY > 50) {
-        // Scrolled state - solid white, small shadow, and blur
-        container.classList.remove('bg-transparent', 'border-transparent', 'hover:bg-white/10');
-        container.classList.add('bg-white/95', 'border-[#1A1A1A]/10', 'shadow-md', 'backdrop-blur-xl');
-        
-        logo.classList.remove('brightness-0', 'invert', 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]');
-        
-        if (centerIcon) {
-          centerIcon.classList.remove('brightness-0', 'invert', 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]');
-        }
-        
-        if (hamburgerBtn) {
-          hamburgerBtn.classList.remove('text-white', 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]');
-          hamburgerBtn.classList.add('text-[#1A1A1A]');
-        }
-      } else {
-        // Top state - completely transparent, no shadow, no blur
-        container.classList.add('bg-transparent', 'border-transparent', 'hover:bg-white/10');
-        container.classList.remove('bg-white/95', 'border-[#1A1A1A]/10', 'shadow-md', 'backdrop-blur-xl');
-        
-        logo.classList.add('brightness-0', 'invert', 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]');
-        
-        if (centerIcon) {
-          centerIcon.classList.add('brightness-0', 'invert', 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]');
-        }
-        
-        if (hamburgerBtn) {
-          hamburgerBtn.classList.add('text-white', 'drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)]');
-          hamburgerBtn.classList.remove('text-[#1A1A1A]');
-        }
-      }
-    }
-    
-    window.addEventListener('scroll', updateHeaderState, { passive: true });
-    // Run once on load to set initial state correctly
-    updateHeaderState();
-  })();
-</script>
