@@ -1,276 +1,452 @@
-<!-- Urbanland in the world section -->
-<section class="w-full overflow-hidden bg-transparent py-20 md:py-28 relative" aria-labelledby="world-presence-heading">
-  <div class="flex flex-col lg:flex-row items-start gap-12 lg:gap-0">
 
-    <!-- Left Content — fixed width, vertically distributed -->
-    <div class="flex flex-col justify-between px-6 md:px-16 lg:w-[400px] xl:w-[440px] shrink-0 py-4 lg:py-0 lg:min-h-[580px] gap-10">
-
-      <div class="space-y-6">
-        <!-- Heading -->
-        <h2
-          id="world-presence-heading"
-          data-text-reveal
-          class="font-sora text-[clamp(2.5rem,5.5vw,4rem)] font-normal leading-[1.08] tracking-tight text-[#010101]"
-        >
-          Urbanland <br class="hidden xl:inline" /><span class="italic text-[#8b3721] font-semibold">in the world</span>
-        </h2>
-
-        <!-- Body text -->
-        <p
-          data-text-reveal
-          data-delay="0.2"
-          class="font-inter-tight text-base md:text-lg text-[#010101]/65 leading-relaxed max-w-[340px]"
-        >
-          Streets and parks around the world. This is a challenge we accept with both pride and responsibility. We create with a love for public space.
-        </p>
-
-        <!-- Stats Grid -->
-        <div data-opai-animate data-delay="0.3" class="grid grid-cols-3 gap-4 border-t border-[#010101]/10 pt-8 mt-6">
-          <div class="space-y-1">
-            <div class="font-sora text-2xl md:text-3xl font-semibold text-[#8b3721]">50+</div>
-            <div class="font-inter text-[10px] uppercase tracking-wider text-[#010101]/50 leading-tight">Landmark Projects</div>
-          </div>
-          <div class="space-y-1">
-            <div class="font-sora text-2xl md:text-3xl font-semibold text-[#8b3721]">15+</div>
-            <div class="font-inter text-[10px] uppercase tracking-wider text-[#010101]/50 leading-tight">Cities Served</div>
-          </div>
-          <div class="space-y-1">
-            <div class="font-sora text-2xl md:text-3xl font-semibold text-[#8b3721]">2Y</div>
-            <div class="font-inter text-[10px] uppercase tracking-wider text-[#010101]/50 leading-tight">Guarantee Period</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Swiper Navigation Arrows & Explore CTA -->
-        <div data-opai-animate data-delay="0.4" class="flex flex-wrap items-center gap-3">
-          <button
-            id="proj-prev"
-            class="hidden lg:flex size-12 items-center justify-center rounded-full border border-[#010101]/15 bg-white text-[#010101] shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#2C5F2E] hover:text-white hover:border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2C5F2E]"
-            aria-label="Previous project"
-          >
-            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M19 12H5M12 19l-7-7 7-7"/>
-            </svg>
-          </button>
-          <button
-            id="proj-next"
-            class="hidden lg:flex size-12 items-center justify-center rounded-full border border-[#010101]/15 bg-white text-[#010101] shadow-sm transition-all duration-300 hover:scale-105 hover:bg-[#2C5F2E] hover:text-white hover:border-transparent focus:outline-none focus-visible:ring-2 focus-visible:ring-[#2C5F2E]"
-            aria-label="Next project"
-          >
-            <svg class="size-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14m-7-7 7 7-7 7"/>
-            </svg>
-          </button>
-          
-          <a
-            href="./case-studies.html"
-            class="btn-shadcn w-fit"
-            aria-label="Our projects"
-          >
-            Our projects
-            <span class="btn-shadcn-icon">
-              <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" />
-              </svg>
-            </span>
-          </a>
-        </div>
-    </div>
-
-    <!-- Right Slider — flush edge cards -->
-    <div class="relative flex-1 overflow-hidden lg:pl-10 w-full">
-      <div
-        id="project-track"
-        class="group/track flex gap-6 overflow-x-auto pt-4 pb-8 px-6 lg:px-0 scroll-smooth"
-        style="scrollbar-width: none; -ms-overflow-style: none; scroll-snap-type: x mandatory; cursor: grab;"
-      >
-
-        <!-- Project 1: Lodha Group -->
-        <div
-          class="relative min-w-[285px] md:min-w-[380px] xl:min-w-[440px] overflow-hidden group shrink-0 transition-all duration-500 rounded-[16px] aspect-[3/4] scroll-snap-align: start hover:!scale-[1.03] hover:z-20 hover:shadow-[0_30px_60px_rgba(0,0,0,0.25)]"
-        >
-          <div class="absolute inset-0 size-full transition-all duration-500 group-hover/track:opacity-40 group-hover/track:blur-[2px] group-hover:!opacity-100 group-hover:!blur-none">
-            <img src="./images/projects/project-1.png" alt="Lodha Group" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
-            <!-- gradient overlay -->
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40"></div>
-
-            <!-- Bottom Content (Title & Spec reveals) -->
-            <div class="absolute bottom-8 left-8 right-8 flex flex-col gap-3 text-white">
-              <h3 class="font-sora text-xl md:text-3xl font-semibold leading-tight tracking-tight lg:translate-y-2 lg:group-hover:translate-y-0 transition-transform duration-500">Lodha Townships</h3>
-              <p class="font-inter text-xs text-white/80 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">420+ WPC & SS benches + GFRC planters supplied across premium township developments.</p>
-              <div class="flex items-center gap-2.5 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 lg:translate-y-4 lg:group-hover:translate-y-0 transition-all duration-500 delay-75">
-                <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#8b3721] bg-white/95 px-2.5 py-1 rounded-[4px]">BENCHES & PLANTERS</span>
-                <span class="size-1 rounded-full bg-white/40"></span>
-                <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">Mumbai</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2: Adani Realty -->
-        <div
-          class="relative min-w-[285px] md:min-w-[380px] xl:min-w-[440px] overflow-hidden group shrink-0 transition-all duration-500 rounded-[16px] aspect-[3/4] scroll-snap-align: start hover:!scale-[1.03] hover:z-20 hover:shadow-[0_30px_60px_rgba(0,0,0,0.25)]"
-        >
-          <div class="absolute inset-0 size-full transition-all duration-500 group-hover/track:opacity-40 group-hover/track:blur-[2px] group-hover:!opacity-100 group-hover:!blur-none">
-            <img src="./images/projects/banner-1.png" alt="Adani Realty" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40"></div>
-
-            <div class="absolute bottom-8 left-8 right-8 flex flex-col gap-3 text-white">
-              <h3 class="font-sora text-xl md:text-3xl font-semibold leading-tight tracking-tight lg:translate-y-2 lg:group-hover:translate-y-0 transition-transform duration-500">Adani Residential</h3>
-              <p class="font-inter text-xs text-white/80 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">Complete outdoor furniture solutions including benches, dustbins, planters, and car sheds.</p>
-              <div class="flex items-center gap-2.5 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 lg:translate-y-4 lg:group-hover:translate-y-0 transition-all duration-500 delay-75">
-                <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#8b3721] bg-white/95 px-2.5 py-1 rounded-[4px]">CAR SHEDS & BENCHES</span>
-                <span class="size-1 rounded-full bg-white/40"></span>
-                <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">Ahmedabad</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3: Oberoi Realty -->
-        <div
-          class="relative min-w-[285px] md:min-w-[380px] xl:min-w-[440px] overflow-hidden group shrink-0 transition-all duration-500 rounded-[16px] aspect-[3/4] scroll-snap-align: start hover:!scale-[1.03] hover:z-10 hover:shadow-[0_30px_60px_rgba(0,0,0,0.25)]"
-        >
-          <div class="absolute inset-0 size-full transition-all duration-500 group-hover/track:opacity-40 group-hover/track:blur-[2px] group-hover:!opacity-100 group-hover:!blur-none">
-            <img src="./images/projects/project-2.png" alt="Oberoi Realty" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40"></div>
-
-            <div class="absolute bottom-8 left-8 right-8 flex flex-col gap-3 text-white">
-              <h3 class="font-sora text-xl md:text-3xl font-semibold leading-tight tracking-tight lg:translate-y-2 lg:group-hover:translate-y-0 transition-transform duration-500">Oberoi Luxury</h3>
-              <p class="font-inter text-xs text-white/80 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">Premium wicker furniture, poolside loungers, and cabanas crafted for luxury spaces.</p>
-              <div class="flex items-center gap-2.5 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 lg:translate-y-4 lg:group-hover:translate-y-0 transition-all duration-500 delay-75">
-                <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#8b3721] bg-white/95 px-2.5 py-1 rounded-[4px]">WICKER FURNITURE</span>
-                <span class="size-1 rounded-full bg-white/40"></span>
-                <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">Thane</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4: Smart Cities -->
-        <div
-          class="relative min-w-[285px] md:min-w-[380px] xl:min-w-[440px] overflow-hidden group shrink-0 transition-all duration-500 rounded-[16px] aspect-[3/4] scroll-snap-align: start hover:!scale-[1.03] hover:z-10 hover:shadow-[0_30px_60px_rgba(0,0,0,0.25)]"
-        >
-          <div class="absolute inset-0 size-full transition-all duration-500 group-hover/track:opacity-40 group-hover/track:blur-[2px] group-hover:!opacity-100 group-hover:!blur-none">
-            <img src="./images/projects/banner-2.png" alt="Smart Cities" class="absolute inset-0 size-full object-cover transition-transform duration-700 group-hover:scale-110" />
-            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/10 to-black/40"></div>
-
-            <div class="absolute bottom-8 left-8 right-8 flex flex-col gap-3 text-white">
-              <h3 class="font-sora text-xl md:text-3xl font-semibold leading-tight tracking-tight lg:translate-y-2 lg:group-hover:translate-y-0 transition-transform duration-500">Smart City Mission</h3>
-              <p class="font-inter text-xs text-white/80 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 transition-opacity duration-300 line-clamp-2">MS/SS bus shelters, park benches, bollards, and outdoor dustbins delivered for urban infra.</p>
-              <div class="flex items-center gap-2.5 opacity-100 lg:opacity-0 lg:group-hover:opacity-100 lg:translate-y-4 lg:group-hover:translate-y-0 transition-all duration-500 delay-75">
-                <span class="font-inter text-[10px] font-bold uppercase tracking-[0.2em] text-[#8b3721] bg-white/95 px-2.5 py-1 rounded-[4px]">BUS SHELTERS</span>
-                <span class="size-1 rounded-full bg-white/40"></span>
-                <span class="font-inter text-[10px] font-medium uppercase tracking-[0.15em] text-white/80">New Delhi</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-
-  <!-- Custom Floating Cursor Follower -->
-  <div
-    id="custom-cursor"
-    class="pointer-events-none fixed z-[9999] hidden lg:flex size-14 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-[#8b3721]/90 text-white opacity-0 scale-0 shadow-lg backdrop-blur-sm transition-all duration-300 ease-out pointer-events-none"
-  >
-    <span class="font-sora text-[9px] font-bold uppercase tracking-widest">Drag</span>
-  </div>
-</section>
-
+<!-- Urbanland in the world section replaced with Smooth-slider -->
 <style>
-  #project-track::-webkit-scrollbar { display: none; }
-  #project-track.dragging { cursor: grabbing; }
+/* Smooth-slider Scoped CSS */
+.smooth-world-wrapper {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  min-height: 600px;
+  overflow: hidden;
+  background-color: transparent;
+  color: #1a1a1a;
+  font-family: "Outfit", sans-serif;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.smooth-world-wrapper p,
+.smooth-world-wrapper a {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: rgba(26, 26, 26, 0.5);
+  text-transform: uppercase;
+}
+
+.smooth-world-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.smooth-slide-container {
+  position: absolute;
+  width: 30%;
+  height: 70%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  cursor: pointer;
+  will-change: transform, opacity, clip-path;
+  z-index: 2;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.smooth-slide-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  will-change: transform;
+}
+
+.smooth-slide-img img {
+  transform: scale(1.5);
+  opacity: 0.9;
+  will-change: transform;
+}
+
+.smooth-slider-title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80px;
+  text-align: center;
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+  z-index: 10;
+  pointer-events: none;
+}
+
+.smooth-slider-title h1 {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  text-align: center;
+  color: #1a1a1a;
+  font-size: 6vw;
+  font-weight: 300;
+  margin: 0;
+  line-height: 1;
+}
+
+.smooth-slider-title h1 span {
+  position: relative;
+  display: inline-block;
+  transform: translateY(80px);
+  will-change: transform;
+}
+
+.smooth-slider-counter {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 2.5em;
+  text-align: center;
+  z-index: 2;
+}
+
+.smooth-slider-counter p {
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.smooth-slider-items {
+  position: absolute;
+  left: 2.5em;
+  bottom: 2.5em;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.smooth-slider-items p {
+  transition: 0.5s color;
+  margin: 0;
+  cursor: pointer;
+}
+
+.smooth-slider-items p.activeItem {
+  color: #1a1a1a;
+}
+
+.smooth-slider-preview {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 75%;
+  margin: 0 auto;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.15;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.smooth-slider-preview img {
+  position: absolute;
+  top: 0;
+  animation: panWorld 20s infinite linear;
+}
+
+
+@keyframes panWorld {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+@media (max-width: 900px) {
+  .smooth-slide-container {
+    top: 70%;
+    width: 70%;
+    height: 45%;
+  }
+  .smooth-slider-preview {
+    top: 0;
+    left: 0;
+    transform: translateX(0%);
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    opacity: 0.5;
+  }
+  .smooth-slider-title {
+    top: 30%;
+  }
+  .smooth-slider-title h1 {
+    font-size: 10vw;
+  }
+}
 </style>
 
+<div class="smooth-world-wrapper" id="urbanland-world">
+   <div class="container absolute top-12 left-0 right-0 z-20 md:top-24 pointer-events-none">
+      <div class="row">
+         <div class="col-12 px-4 md:px-12">
+            <h2 class="text-5xl lg:text-7xl !leading-tight font-light tracking-tight text-black pointer-events-auto">Urbanland in the world</h2>
+         </div>
+      </div>
+   </div>
+
+   <div class="smooth-slide-container prev">
+      <div class="smooth-slide-img">
+         <img src="./images/projects/banner-2.png" alt="Smart City Mission" />
+      </div>
+   </div>
+   <div class="smooth-slide-container active">
+      <div class="smooth-slide-img">
+         <img src="./images/projects/project-1.png" alt="Lodha Townships" />
+      </div>
+   </div>
+   <div class="smooth-slide-container next">
+      <div class="smooth-slide-img">
+         <img src="./images/projects/banner-1.png" alt="Adani Residential" />
+      </div>
+   </div>
+
+   <div class="smooth-slider-title">
+      <h1>Lodha Townships</h1>
+   </div>
+
+   <div class="smooth-slider-counter">
+      <p><span>1</span><span>/</span><span>4</span></p>
+   </div>
+
+   <div class="smooth-slider-items">
+      <p class="activeItem">Lodha Townships</p>
+      <p>Adani Residential</p>
+      <p>Oberoi Luxury</p>
+      <p>Smart City Mission</p>
+   </div>
+
+   <div class="smooth-slider-preview">
+      <img src="./images/projects/project-1.png" alt="Lodha Townships preview" />
+   </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/CustomEase.min.js"></script>
+
 <script>
-  (function() {
-    const track = document.getElementById('project-track');
-    const nextBtn = document.getElementById('proj-next');
-    const prevBtn = document.getElementById('proj-prev');
-    const cursor = document.getElementById('custom-cursor');
-    if (!track) return;
+document.addEventListener('DOMContentLoaded', () => {
+    if (typeof gsap === 'undefined' || typeof CustomEase === 'undefined') return;
 
-    // Smooth Button Scrolling Controls
-    if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
-        const card = track.firstElementChild;
-        const gap = 24;
-        const cardWidth = card ? card.offsetWidth + gap : 400;
-        const maxScroll = track.scrollWidth - track.clientWidth;
-        if (track.scrollLeft >= maxScroll - 15) {
-          track.scrollTo({ left: 0, behavior: 'smooth' });
-        } else {
-          track.scrollBy({ left: cardWidth, behavior: 'smooth' });
+    gsap.registerPlugin(CustomEase);
+    CustomEase.create(
+        'hopWorld',
+        'M0,0 C0.488,0.02 0.467,0.286 0.5,0.5 0.532,0.712 0.58,1 1,1'
+    );
+
+    const slider = document.querySelector('.smooth-world-wrapper');
+    if (!slider) return;
+
+    const sliderTitle = slider.querySelector('.smooth-slider-title');
+    const sliderCounter = slider.querySelector('.smooth-slider-counter p span:first-child');
+    const sliderItems = slider.querySelector('.smooth-slider-items');
+    const sliderPreview = slider.querySelector('.smooth-slider-preview');
+    const totalSlides = 4;
+    let activeSlideIndex = 1;
+    let isAnimating = false;
+
+    const sliderContent = [
+        { name: 'Lodha Townships', img: './images/projects/project-1.png' },
+        { name: 'Adani Residential', img: './images/projects/banner-1.png' },
+        { name: 'Oberoi Luxury', img: './images/projects/project-2.png' },
+        { name: 'Smart City Mission', img: './images/projects/banner-2.png' }
+    ];
+
+    const clipPath = {
+        closed: 'polygon(25% 30%, 75% 30%, 75% 70%, 25% 70%)',
+        open: 'polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)',
+    };
+
+    const slidePositions = {
+        prev: { left: '15%', rotation: -90 },
+        active: { left: '50%', rotation: 0 },
+        next: { left: '85%', rotation: 90 },
+    };
+
+    function splitTextIntoSpans(element) {
+        element.innerHTML = element.innerText
+            .split('')
+            .map(char => `<span>${char === ' ' ? '&nbsp;&nbsp;' : char}</span>`)
+            .join('');
+    }
+
+    function createAndAnimateTitle(content, direction) {
+        const newTitle = document.createElement('h1');
+        newTitle.innerText = content.name;
+        sliderTitle.appendChild(newTitle);
+        splitTextIntoSpans(newTitle);
+
+        const yOffset = direction === 'next' ? 80 : -80;
+        gsap.set(newTitle.querySelectorAll('span'), { y: yOffset });
+        gsap.to(newTitle.querySelectorAll('span'), {
+            y: 0,
+            duration: 1.25,
+            stagger: 0.02,
+            ease: 'hopWorld',
+            delay: 0.25,
+        });
+
+        const currentTitle = sliderTitle.querySelector('h1:not(:last-child)');
+        if (currentTitle) {
+            gsap.to(currentTitle.querySelectorAll('span'), {
+                y: -yOffset,
+                duration: 1.25,
+                stagger: 0.02,
+                ease: 'hopWorld',
+                delay: 0.25,
+                onComplete: () => currentTitle.remove(),
+            });
         }
-      });
     }
 
-    if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
-        const card = track.firstElementChild;
-        const gap = 24;
-        const cardWidth = card ? card.offsetWidth + gap : 400;
-        if (track.scrollLeft <= 15) {
-          track.scrollTo({ left: track.scrollWidth, behavior: 'smooth' });
-        } else {
-          track.scrollBy({ left: -cardWidth, behavior: 'smooth' });
+    function createSlide(content, className) {
+        const slide = document.createElement('div');
+        slide.className = `smooth-slide-container ${className}`;
+        slide.innerHTML = `<div class="smooth-slide-img"><img src="${content.img}" alt="${content.name}"></div>`;
+        return slide;
+    }
+
+    function getSlideIndex(increment) {
+        return ((activeSlideIndex + increment - 1 + totalSlides) % totalSlides) + 1;
+    }
+
+    function updateCounterAndHighlight(index) {
+        if(sliderCounter) sliderCounter.textContent = index;
+        if(sliderItems) {
+            sliderItems.querySelectorAll('p').forEach((item, i) =>
+                item.classList.toggle('activeItem', i === index - 1)
+            );
         }
-      });
     }
 
-    // Custom Cursor Follower Events
-    if (cursor) {
-      track.addEventListener('mouseenter', () => {
-        cursor.style.opacity = '1';
-        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-      });
+    function updatePreviewImage(content) {
+        const newImage = document.createElement('img');
+        newImage.src = content.img;
+        newImage.alt = content.name;
+        sliderPreview.appendChild(newImage);
 
-      track.addEventListener('mouseleave', () => {
-        cursor.style.opacity = '0';
-        cursor.style.transform = 'translate(-50%, -50%) scale(0)';
-      });
-
-      track.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
-      });
+        gsap.fromTo(
+            newImage,
+            { opacity: 0 },
+            {
+                opacity: 1,
+                duration: 1,
+                ease: 'power2.inOut',
+                delay: 0.5,
+                onComplete: () => {
+                    const oldImg = sliderPreview.querySelector('img:not(:last-child)');
+                    if(oldImg) oldImg.remove();
+                }
+            }
+        );
     }
 
-    // drag-to-scroll
-    let isDown = false, startX, scrollLeft;
-    track.addEventListener('mousedown', (e) => {
-      isDown = true;
-      track.classList.add('dragging');
-      startX = e.pageX - track.offsetLeft;
-      scrollLeft = track.scrollLeft;
-      if (cursor) {
-        cursor.style.transform = 'translate(-50%, -50%) scale(0.85)';
-        cursor.style.backgroundColor = 'rgba(139, 55, 33, 0.9)';
-        cursor.firstElementChild.innerText = 'Swipe';
-      }
+    function animateSlide(slide, props) {
+        gsap.to(slide, { ...props, duration: 2, ease: 'hopWorld' });
+        gsap.to(slide.querySelector('.smooth-slide-img'), {
+            rotation: -(props.rotation || 0),
+            duration: 2,
+            ease: 'hopWorld',
+        });
+    }
+
+    function transitionSlides(direction) {
+        if (isAnimating) return;
+        isAnimating = true;
+
+        const outgoingPos = direction === 'next' ? 'prev' : 'next';
+        const incomingPos = direction === 'next' ? 'next' : 'prev';
+
+        const outgoingSlide = slider.querySelector(`.${outgoingPos}`);
+        const activeSlide = slider.querySelector('.active');
+        const incomingSlide = slider.querySelector(`.${incomingPos}`);
+
+        animateSlide(incomingSlide, {
+            ...slidePositions.active,
+            clipPath: clipPath.open,
+        });
+        animateSlide(activeSlide, {
+            ...slidePositions[outgoingPos],
+            clipPath: clipPath.closed,
+        });
+        if(outgoingSlide) {
+            gsap.to(outgoingSlide, { scale: 0, opacity: 0, duration: 2, ease: 'hopWorld' });
+        }
+
+        const newSlideIndex = getSlideIndex(direction === 'next' ? 2 : -2);
+        const newSlide = createSlide(sliderContent[newSlideIndex - 1], incomingPos);
+        slider.appendChild(newSlide);
+        gsap.set(newSlide, {
+            ...slidePositions[incomingPos],
+            xPercent: -50,
+            yPercent: -50,
+            scale: 0,
+            opacity: 0,
+            clipPath: clipPath.closed,
+        });
+        gsap.to(newSlide, { scale: 1, opacity: 1, duration: 2, ease: 'hopWorld' });
+
+        const nextActiveIndex = getSlideIndex(direction === 'next' ? 1 : -1);
+        createAndAnimateTitle(sliderContent[nextActiveIndex - 1], direction);
+        updatePreviewImage(sliderContent[nextActiveIndex - 1]);
+
+        setTimeout(() => updateCounterAndHighlight(nextActiveIndex), 1000);
+
+        setTimeout(() => {
+            if(outgoingSlide) outgoingSlide.remove();
+            if(activeSlide) activeSlide.className = `smooth-slide-container ${outgoingPos}`;
+            if(incomingSlide) incomingSlide.className = 'smooth-slide-container active';
+            if(newSlide) newSlide.className = `smooth-slide-container ${incomingPos}`;
+            activeSlideIndex = nextActiveIndex;
+            isAnimating = false;
+        }, 2000);
+    }
+
+    slider.addEventListener('click', e => {
+        const clickedSlide = e.target.closest('.smooth-slide-container');
+        if (clickedSlide && !isAnimating) {
+            transitionSlides(clickedSlide.classList.contains('next') ? 'next' : 'prev');
+        }
     });
 
-    document.addEventListener('mouseup', () => {
-      if (!isDown) return;
-      isDown = false;
-      track.classList.remove('dragging');
-      if (cursor) {
-        cursor.style.transform = 'translate(-50%, -50%) scale(1)';
-        cursor.style.backgroundColor = 'rgba(139, 55, 33, 0.9)';
-        cursor.firstElementChild.innerText = 'Drag';
-      }
+    // Initial setup
+    Object.entries(slidePositions).forEach(([key, value]) => {
+        gsap.set(`.smooth-slide-container.${key}`, {
+            ...value,
+            xPercent: -50,
+            yPercent: -50,
+            clipPath: key === 'active' ? clipPath.open : clipPath.closed,
+        });
+        if (key !== 'active') {
+            gsap.set(`.smooth-slide-container.${key} .smooth-slide-img`, {
+                rotation: -value.rotation,
+            });
+        }
     });
 
-    track.addEventListener('mousemove', (e) => {
-      if (!isDown) return;
-      e.preventDefault();
-      const x = e.pageX - track.offsetLeft;
-      const walk = (x - startX) * 1.5; // Scroll speed multiplier
-      track.scrollLeft = scrollLeft - walk;
-    });
-  })();
+    const initialTitle = sliderTitle.querySelector('h1');
+    if(initialTitle) {
+        splitTextIntoSpans(initialTitle);
+        gsap.fromTo(
+            initialTitle.querySelectorAll('span'),
+            { y: 80 },
+            { y: 0, duration: 1, stagger: 0.02, ease: 'hopWorld' }
+        );
+    }
+
+    updateCounterAndHighlight(activeSlideIndex);
+
+    if(sliderItems) {
+        sliderItems.querySelectorAll('p').forEach((item, index) => {
+            item.addEventListener('click', () => {
+                if (index + 1 !== activeSlideIndex && !isAnimating) {
+                    transitionSlides(index + 1 > activeSlideIndex ? 'next' : 'prev');
+                }
+            });
+        });
+    }
+});
 </script>

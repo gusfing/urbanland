@@ -1,14 +1,14 @@
 @theme {
   /* =============== FONTS =============== */
-  --font-inter: 'Inter', sans-serif;
-  --font-playfair: 'Playfair Display', serif;
-  --font-inter-tight: 'Inter', sans-serif;
-  --font-ibm-plex-mono: 'IBM Plex Mono', monospace;
-  --font-instrument-serif: 'Playfair Display', serif;
-  --font-manrope: 'Inter', sans-serif;
-  --font-sora: 'Playfair Display', serif;
-  --font-space-grotesk: 'Playfair Display', serif;
-  --font-funnel-display: 'Playfair Display', serif;
+  --font-inter: 'Outfit', sans-serif;
+  --font-playfair: 'Outfit', sans-serif;
+  --font-inter-tight: 'Outfit', sans-serif;
+  --font-ibm-plex-mono: 'Outfit', monospace;
+  --font-instrument-serif: 'Outfit', sans-serif;
+  --font-manrope: 'Outfit', sans-serif;
+  --font-sora: 'Outfit', sans-serif;
+  --font-space-grotesk: 'Outfit', sans-serif;
+  --font-funnel-display: 'Outfit', sans-serif;
 
   /* =============== COLORS =============== */
   --color-background-1: #3d4753;

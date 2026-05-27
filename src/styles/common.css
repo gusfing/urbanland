@@ -1,5 +1,29 @@
 /* =========== GLOBAL STYLES ========== */
 
+* {
+  font-weight: 400 !important;
+}
+
+b, strong {
+  font-weight: 400 !important;
+}
+
+@font-face {
+  font-family: 'HelveticaNowMicro';
+  src: url('/mmcite/assets/front/fonts/HelveticaNowMicro.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DINPro';
+  src: url('/mmcite/assets/front/fonts/DINPro-Bold%20tr.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
 /* Lenis Scroll Normalization */
 html.lenis, html.lenis body {
   height: auto;
@@ -46,16 +70,16 @@ body {
 }
 
 [data-opai-animate] {
-  opacity: 0;
+  opacity: 1;
 }
 
 /* Hidden until SplitText + text-reveal.js runs (avoids FOUC); lines fade in in the tween */
 [data-text-reveal] {
-  opacity: 0;
+  opacity: 1;
 }
 
 [data-text-reveal] .text-reveal-line {
-  opacity: 0;
+  opacity: 1;
 }
 
 /* ========== CONTAINER ========== */
